@@ -6,24 +6,27 @@ public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
+    Rigidbody2D rigidbody;
     void Start()
     {
-        speed = .02f;
+        speed = 5f;
+        rigidbody = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
     void Update()
     {
         //TODO: make player movement independent of resolution
-        float h = Input.GetAxisRaw("Horizontal");
-        float v = Input.GetAxisRaw("Vertical");
-
-        if (System.Math.Abs(h) > 0.1 & System.Math.Abs(v) > 0.1)
-        { 
-            h /= 1.41f;
-            v /= 1.41f;
-        }
         
-        transform.Translate(new Vector2( h * speed, v * speed));
+    }
+
+    private void FixedUpdate()
+    {
+        //Store user input as a movement vector
+        Vector3 m_Input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+
+        //Apply the movement vector to the current position, which is
+        //multiplied by deltaTime and speed for a smooth MovePosition
+        rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
     }
 }
