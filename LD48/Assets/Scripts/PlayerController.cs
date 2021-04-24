@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public float speed;
     void Start()
     {
-        
+        speed = .02f;
     }
 
     // Update is called once per frame
@@ -19,10 +20,10 @@ public class PlayerController : MonoBehaviour
 
         if (System.Math.Abs(h) > 0.1 & System.Math.Abs(v) > 0.1)
         { 
-            h = h / 1.41f;
-            v = v / 1.41f;
+            h /= 1.41f;
+            v /= 1.41f;
         }
         
-        transform.Translate(new Vector2( h * .02f, v * .02f));
+        transform.Translate(new Vector2( h * speed, v * speed));
     }
 }
