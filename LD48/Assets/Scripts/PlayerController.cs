@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour
     public GameObject pendDisp;
     public string pendant;
 
+    public string facing;
+    public Animation anim;
+
     void Start()
     {
         health = 7;
@@ -39,6 +42,9 @@ public class PlayerController : MonoBehaviour
         dispInventory = false;
 
         rings = new string[3];
+
+        facing = "d";
+        anim = gameObject.GetComponent<Animation>();
     }
 
     // Update is called once per frame
@@ -61,6 +67,11 @@ public class PlayerController : MonoBehaviour
             GameObject.Find("HealthBar").GetComponent<Image>().sprite = healthSprites[health - 1];
         else
             Debug.Log("Player died");
+
+        if (Input.GetAxisRaw("Horizontal") < 0)
+        {
+
+        }
     }
 
     void FixedUpdate()
