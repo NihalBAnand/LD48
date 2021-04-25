@@ -5,11 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Room
-
   - Monster
-
-  - Item
-
+  - roomgen
   layers:
   - Default
   - TransparentFX
@@ -19,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - Monster
+  - 
   - 
   - 
   - 
@@ -46,7 +43,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: Player
-    uniqueID: 570744313
     locked: 0

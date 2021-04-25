@@ -72,7 +72,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 570744313
-  m_SortingLayer: 1
+  m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 1512761e59dea354ebf010f86b60a3dc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -100,6 +100,14 @@ MonoBehaviour:
   speed: 0
   health: 0
   inRangeEnemy: {fileID: 0}
+  healthSprites:
+  - {fileID: 1600302219899614084, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
+  - {fileID: -6939131482979862543, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
+  - {fileID: -1249218958357054705, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
+  - {fileID: -7262399802281365513, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
+  - {fileID: -7812037798849800910, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
+  - {fileID: -3091125404629116300, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
+  - {fileID: -1757740016571080316, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
 --- !u!61 &1683283012644349984
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -17,6 +17,7 @@ public class RoomGenerator : MonoBehaviour
     public GameObject room9;
     public GameObject room10;
     public GameObject room11;
+    public GameObject finalRoom;
     public List<GameObject> roomTypes = new List<GameObject>();
 
     public GameObject player;
@@ -24,7 +25,8 @@ public class RoomGenerator : MonoBehaviour
     public GameObject monster;
     public List<GameObject> monsters = new List<GameObject>();
 
-    public int globalLevel;
+    private int globalLevel;
+    public int roomsGenerated;
 
     [SerializeField]
     public Vector2Int curRoomPos = new Vector2Int(0, 0);
@@ -32,8 +34,7 @@ public class RoomGenerator : MonoBehaviour
     public Room curRoom;
     string dir = "";
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
         //instantiate list of room prefabs
         roomTypes.Add(room1);
@@ -47,21 +48,32 @@ public class RoomGenerator : MonoBehaviour
         roomTypes.Add(room9);
         roomTypes.Add(room10);
         roomTypes.Add(room11);
+        roomTypes.Add(finalRoom);
+    }
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+
+        
+
+        roomsGenerated = 0;
 
         //initialize first room
-        rooms.Add(Instantiate(roomTypes[0]));
-        rooms[0].GetComponent<Room>().pos = new Vector2Int(0,0);
+        //rooms.Add(Instantiate(roomTypes[0]));
+        //rooms[0].GetComponent<Room>().pos = new Vector2Int(0, 0);
 
-        monsters.Add(Instantiate(monster));
-        monsters[0].GetComponent<Monster>().level = 3;
-        monsters[0].transform.parent = rooms[0].transform;
+        //monsters.Add(Instantiate(monster));
+        //monsters[0].GetComponent<Monster>().level = 3;
+        //monsters[0].transform.parent = rooms[0].transform;
 
-        curRoomPos = rooms[0].GetComponent<Room>().pos;
-        curRoom = rooms[0].GetComponent<Room>();
+        //curRoomPos = rooms[0].GetComponent<Room>().pos;
+        //curRoom = rooms[0].GetComponent<Room>();
 
         globalLevel = 1;
 
-        Instantiate(player);
+        
     }
 
     //move into a new room when player walks through a door
@@ -97,6 +109,7 @@ public class RoomGenerator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        globalLevel = GameObject.Find("OP Controller").GetComponent<OPController>().globalLevel;
         //search for existing rooms at the new position -- this assumes UpdateMovement has been called. If not, this does nothing
         bool foundRoom = false;
         foreach (GameObject g in rooms)
@@ -121,11 +134,15 @@ public class RoomGenerator : MonoBehaviour
             {
                 //generate a random room to try to create
                 System.Random rand = new System.Random();
-                int roomNum = rand.Next(0, 11);
+                int roomNum = rand.Next(0, 12);
 
                 bool allGood = true;
                 //checks if the random room type has a door to where we're coming from
                 if (!roomTypes[roomNum].GetComponent<Room>().doors.Contains(dir))
+                {
+                    allGood = false;
+                }
+                if (roomTypes[roomNum].name.Contains("FinalRoom") && roomsGenerated < globalLevel * 4)
                 {
                     allGood = false;
                 }
@@ -193,6 +210,8 @@ public class RoomGenerator : MonoBehaviour
                         temp2.transform.parent = temp.transform;
                         monsters.Add(temp2);
                     }
+
+                    roomsGenerated++;
                 }
             }
             //finish generation

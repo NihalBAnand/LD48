@@ -28,12 +28,12 @@ public class Room : MonoBehaviour
             if (System.Math.Abs(collision.gameObject.transform.position.x) > System.Math.Abs(collision.gameObject.transform.position.y)) {
                 if (collision.gameObject.transform.position.x > 0)
                 {
-                    GameObject.Find("Room Generator").GetComponent<RoomGenerator>().UpdateMovement("East");
+                    GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("East");
                     collision.gameObject.transform.position = new Vector3(0, 0, 0);
                 }
                 if (collision.gameObject.transform.position.x < 0)
                 {
-                    GameObject.Find("Room Generator").GetComponent<RoomGenerator>().UpdateMovement("West");
+                    GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("West");
                     collision.gameObject.transform.position = new Vector3(0, 0, 0);
                 }
             }
@@ -41,12 +41,12 @@ public class Room : MonoBehaviour
             {
                 if (collision.gameObject.transform.position.y > 0)
                 {
-                    GameObject.Find("Room Generator").GetComponent<RoomGenerator>().UpdateMovement("North");
+                    GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("North");
                     collision.gameObject.transform.position = new Vector3(0, 0, 0);
                 }
                 if (collision.gameObject.transform.position.y < 0)
                 {
-                    GameObject.Find("Room Generator").GetComponent<RoomGenerator>().UpdateMovement("South");
+                    GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("South");
                     collision.gameObject.transform.position = new Vector3(0, 0, 0);
                 }
             }

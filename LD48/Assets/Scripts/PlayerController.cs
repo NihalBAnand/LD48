@@ -1,22 +1,28 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     public float speed;
-    public float health;
+    public int health;
 
     Rigidbody2D rigidbody;
     
     public GameObject inRangeEnemy;
-    
+
+    public List<Sprite> healthSprites;
+
+    public bool canStart;
+
     void Start()
     {
-        health = 100f;
+        health = 7;
         speed = 5f;
         rigidbody = GetComponent<Rigidbody2D>();
+        canStart = false;
     }
 
     // Update is called once per frame
@@ -37,6 +43,17 @@ public class PlayerController : MonoBehaviour
 
             }
         }
+
+        if (Input.GetKeyDown(KeyCode.Return) && canStart)
+        {
+            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "...AZATHOTH demands a trial...", "...A test of will and devotion...", "...We have selected you to undergo it...", "...Walk into the SUMMONING CIRCLE to begin your trial...", "...The mercy of the OLD ONES be upon you." }));
+
+        }
+
+        if (health > 0)
+            GameObject.Find("HealthBar").GetComponent<Image>().sprite = healthSprites[health - 1];
+        else
+            Debug.Log("Player died");
     }
 
     void FixedUpdate()
@@ -61,6 +78,22 @@ public class PlayerController : MonoBehaviour
         if (collision.tag.Equals("Monster"))
         {
             inRangeEnemy = null;
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Contains("Cult_Leader"))
+        {
+            canStart = true;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.name.Contains("Cult_Leader"))
+        {
+            canStart = false;
         }
     }
 }

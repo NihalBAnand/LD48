@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Monster : MonoBehaviour
 {
@@ -42,9 +43,17 @@ public class Monster : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("Player")){
-            collision.gameObject.GetComponent<PlayerController>().health -= 5;
+            collision.gameObject.GetComponent<PlayerController>().health -= 1;
+            StartCoroutine(flashColor());
         }
         Debug.Log("Monster Attack");
         Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);
+    }
+
+    private IEnumerator flashColor()
+    {
+        GameObject.Find("HealthBar").GetComponent<Image>().color = new Color32(255, 105, 105, 255);
+        yield return new WaitForSecondsRealtime(.2f);
+        GameObject.Find("HealthBar").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
     }
 }

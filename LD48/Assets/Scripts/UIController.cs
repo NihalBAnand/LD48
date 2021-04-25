@@ -16,7 +16,7 @@ public class UIController : MonoBehaviour
     void Start()
     {
         textbox = GameObject.Find("Textbox");
-        textfield = GameObject.Find("Text");
+        textfield = GameObject.Find("tboxText");
         tStarted = false;
 
         textbox.SetActive(false);
