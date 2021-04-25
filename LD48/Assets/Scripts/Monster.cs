@@ -10,9 +10,7 @@ public class Monster : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     void Start()
     {
-        level = 3;
-        Debug.Log(level);
-        spriteRenderer.sprite = Images[level - 1];
+        
         
     }
     
@@ -20,6 +18,22 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (level > 0)
+            spriteRenderer.sprite = Images[level - 1];
+
         
+    }
+
+    private void FixedUpdate()
+    {
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward, 10f);
+
+        if (hit.collider != null)
+        {
+            if (hit.collider.gameObject.name.Contains("Player"))
+            {
+                Debug.Log("Noticed Player!!");
+            }
+        }
     }
 }

@@ -21,8 +21,10 @@ public class RoomGenerator : MonoBehaviour
 
     public GameObject player;
 
-    public GameObject Monster;
+    public GameObject monster;
     public List<GameObject> monsters = new List<GameObject>();
+
+    public int globalLevel;
 
     [SerializeField]
     public Vector2Int curRoomPos = new Vector2Int(0, 0);
@@ -33,7 +35,7 @@ public class RoomGenerator : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //instantiate list of prefabs for later
+        //instantiate list of room prefabs
         roomTypes.Add(room1);
         roomTypes.Add(room2);
         roomTypes.Add(room3);
@@ -49,11 +51,15 @@ public class RoomGenerator : MonoBehaviour
         //initialize first room
         rooms.Add(Instantiate(roomTypes[0]));
         rooms[0].GetComponent<Room>().pos = new Vector2Int(0,0);
-        monsters.Add(Instantiate(Monster));
+
+        monsters.Add(Instantiate(monster));
         monsters[0].GetComponent<Monster>().level = 3;
         monsters[0].transform.parent = rooms[0].transform;
+
         curRoomPos = rooms[0].GetComponent<Room>().pos;
         curRoom = rooms[0].GetComponent<Room>();
+
+        globalLevel = 1;
 
         Instantiate(player);
     }
@@ -176,6 +182,17 @@ public class RoomGenerator : MonoBehaviour
                 {
                     temp = Instantiate(roomTypes[roomNum]);
                     validRoomFound = true;
+
+                    temp.GetComponent<Room>().roomLevel = rand.Next(1, 6) + globalLevel;
+
+                    int monNum = rand.Next(0, 2);
+                    if (monNum == 0)
+                    {
+                        GameObject temp2 = Instantiate(monster);
+                        temp2.GetComponent<Monster>().level = rand.Next(globalLevel, temp.GetComponent<Room>().roomLevel);
+                        temp2.transform.parent = temp.transform;
+                        monsters.Add(temp2);
+                    }
                 }
             }
             //finish generation
@@ -183,5 +200,6 @@ public class RoomGenerator : MonoBehaviour
             curRoom = temp.GetComponent<Room>();
             rooms.Add(temp);
         }
+        dir = "";
     }
 }
