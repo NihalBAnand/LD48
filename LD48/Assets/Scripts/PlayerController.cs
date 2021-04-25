@@ -84,6 +84,7 @@ public class PlayerController : MonoBehaviour
         else if(collision.gameObject.tag.Equals("Monster"))
         {
             health -= 1;
+            StartCoroutine(flashColor());
             Debug.Log("Monster Attack");
             Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);
         }

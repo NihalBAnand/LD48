@@ -59,7 +59,7 @@ public class Monster : MonoBehaviour
             target = collision.transform.position;
             targetInRange = true;
             //collision.gameObject.GetComponent<PlayerController>().
-            StartCoroutine(flashColor());
+            
         }
         /*Debug.Log("Monster Attack");
         Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);*/
