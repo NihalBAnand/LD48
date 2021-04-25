@@ -16,6 +16,18 @@ public class PlayerController : MonoBehaviour
     public List<Sprite> healthSprites;
 
     public bool canStart;
+    public List<string> cultText;
+
+    public bool dispInventory;
+    public GameObject inventoryObj;
+
+    //public List<Sprite> ringSprites;
+    public List<GameObject> ringDisp;
+    public string[] rings;
+
+    //public List<Sprite> pendantSprites;
+    public GameObject pendDisp;
+    public string pendant;
 
     void Start()
     {
@@ -23,30 +35,25 @@ public class PlayerController : MonoBehaviour
         speed = 5f;
         rigidbody = GetComponent<Rigidbody2D>();
         canStart = false;
+
+        dispInventory = false;
+
+        rings = new string[3];
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.E))
         {
-            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "...AZATHOTH demands a sacrifice...", "...And it shall be YOU!", "Loser lmfao" }));
-
-            if (inRangeEnemy)
-            {
-                if (Input.GetKeyDown(KeyCode.A))
-                {
-                    inRangeEnemy.GetComponent<Monster>().health -= 20;
-                    Debug.Log("Player Attack \n" + inRangeEnemy.GetComponent<Monster>().health);
-                }
-
-            }
+            dispInventory = !dispInventory;
         }
+
+        inventoryObj.SetActive(dispInventory);
 
         if (Input.GetKeyDown(KeyCode.Return) && canStart)
         {
-            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "...AZATHOTH demands a trial...", "...A test of will and devotion...", "...We have selected you to undergo it...", "...Walk into the SUMMONING CIRCLE to begin your trial...", "...The mercy of the OLD ONES be upon you." }));
+            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(cultText);
 
         }
 
@@ -83,15 +90,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Contains("Cult_Leader"))
+        if (collision.gameObject.name.Contains("Cult"))
         {
             canStart = true;
+            cultText = collision.gameObject.GetComponent<Cultist>().text;
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.name.Contains("Cult_Leader"))
+        if (collision.gameObject.name.Contains("Cult"))
         {
             canStart = false;
         }

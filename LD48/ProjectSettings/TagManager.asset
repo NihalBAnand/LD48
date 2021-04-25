@@ -7,6 +7,7 @@ TagManager:
   - Room
   - Monster
   - roomgen
+  - item
   layers:
   - Default
   - TransparentFX
