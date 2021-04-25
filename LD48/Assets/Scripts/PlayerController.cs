@@ -25,20 +25,21 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>( new string[] { "...AZATHOTH demands a sacrifice...", "...And it shall be YOU!", "Loser lmfao" } ));
+            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "...AZATHOTH demands a sacrifice...", "...And it shall be YOU!", "Loser lmfao" }));
 
-        if (inRangeEnemy)
-        {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (inRangeEnemy)
             {
-                inRangeEnemy.GetComponent<Monster>().health -= 20;
-                Debug.Log("Player Attack \n" + inRangeEnemy.GetComponent<Monster>().health);
-            }
+                if (Input.GetKeyDown(KeyCode.A))
+                {
+                    inRangeEnemy.GetComponent<Monster>().health -= 20;
+                    Debug.Log("Player Attack \n" + inRangeEnemy.GetComponent<Monster>().health);
+                }
 
+            }
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         //Store user input as a movement vector
         Vector3 m_Input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
@@ -47,14 +48,15 @@ public class PlayerController : MonoBehaviour
         //multiplied by deltaTime and speed for a smooth MovePosition
         rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("Monster"))
         {
             inRangeEnemy = collision.gameObject;
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+
+    void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.tag.Equals("Monster"))
         {
