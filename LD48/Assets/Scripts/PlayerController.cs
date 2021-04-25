@@ -97,4 +97,10 @@ public class PlayerController : MonoBehaviour
             canStart = false;
         }
     }
+    private IEnumerator flashColor()
+    {
+        GameObject.Find("HealthBar").GetComponent<Image>().color = new Color32(255, 105, 105, 255);
+        yield return new WaitForSecondsRealtime(.2f);
+        GameObject.Find("HealthBar").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
+    }
 }
