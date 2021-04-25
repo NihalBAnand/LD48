@@ -6,10 +6,12 @@ public class Room : MonoBehaviour
 {
     public Vector2Int pos;
     public List<string> doors = new List<string>(); // list of doors in room by direction
+    public int roomLevel;
 
     // Start is called before the first frame update
     void Start()
     {
+
     }
 
     // Update is called once per frame

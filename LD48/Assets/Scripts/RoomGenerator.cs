@@ -21,6 +21,9 @@ public class RoomGenerator : MonoBehaviour
 
     public GameObject player;
 
+    public GameObject Monster;
+    public List<GameObject> monsters = new List<GameObject>();
+
     [SerializeField]
     public Vector2Int curRoomPos = new Vector2Int(0, 0);
     
@@ -46,6 +49,9 @@ public class RoomGenerator : MonoBehaviour
         //initialize first room
         rooms.Add(Instantiate(roomTypes[0]));
         rooms[0].GetComponent<Room>().pos = new Vector2Int(0,0);
+        monsters.Add(Instantiate(Monster));
+        monsters[0].GetComponent<Monster>().level = 3;
+        monsters[0].transform.parent = rooms[0].transform;
         curRoomPos = rooms[0].GetComponent<Room>().pos;
         curRoom = rooms[0].GetComponent<Room>();
 
