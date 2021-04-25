@@ -45,6 +45,6 @@ public class Monster : MonoBehaviour
             collision.gameObject.GetComponent<PlayerController>().health -= 5;
         }
         Debug.Log("Monster Attack");
-        Debug.Log(collision.gameObject.GetComponent<PlayerController>().health);
+        Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);
     }
 }
