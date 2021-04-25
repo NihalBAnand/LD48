@@ -104,8 +104,11 @@ MonoBehaviour:
   - {fileID: 21300000, guid: c228c87e19dbbf14da45a7c18a1e2504, type: 3}
   - {fileID: 21300000, guid: 04c09b59934050c4c9169c3758efeef7, type: 3}
   - {fileID: 21300000, guid: 1d53345001b55d343bc08ac7709b2d42, type: 3}
-  level: 0
   spriteRenderer: {fileID: 2838125701408245069}
+  level: 0
+  health: 0
+  deceleration: 0
+  acceleration: 0
 --- !u!50 &-2906791853120660242
 Rigidbody2D:
   serializedVersion: 4
@@ -177,5 +180,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
