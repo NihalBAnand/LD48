@@ -5,7 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Room
+
   - Monster
+
+  - Item
+
   layers:
   - Default
   - TransparentFX
