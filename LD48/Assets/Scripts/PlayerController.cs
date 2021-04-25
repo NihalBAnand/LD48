@@ -30,7 +30,9 @@ public class PlayerController : MonoBehaviour
     public string pendant;
 
     public string facing;
-    public Animation anim;
+    public Animator anim;
+
+    public GameObject opcont;
 
     void Start()
     {
@@ -43,45 +45,71 @@ public class PlayerController : MonoBehaviour
 
         rings = new string[3];
 
-        facing = "d";
-        anim = gameObject.GetComponent<Animation>();
+        facing = "Down";
+        anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
+        if (!opcont.GetComponent<OPController>().paused)
         {
-            dispInventory = !dispInventory;
-        }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                dispInventory = !dispInventory;
+            }
 
-        inventoryObj.SetActive(dispInventory);
+            inventoryObj.SetActive(dispInventory);
 
-        if (Input.GetKeyDown(KeyCode.Return) && canStart)
-        {
-            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(cultText);
+            if (Input.GetKeyDown(KeyCode.Return) && canStart)
+            {
+                GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(cultText);
 
-        }
+            }
 
-        if (health > 0)
-            GameObject.Find("HealthBar").GetComponent<Image>().sprite = healthSprites[health - 1];
-        else
-            Debug.Log("Player died");
+            if (health > 0)
+                GameObject.Find("HealthBar").GetComponent<Image>().sprite = healthSprites[health - 1];
+            else
+                Debug.Log("Player died");
 
-        if (Input.GetAxisRaw("Horizontal") < 0)
-        {
-
+            if (Input.GetAxisRaw("Horizontal") < 0)
+            {
+                facing = "Left";
+                anim.Play("Player_Left");
+            }
+            else if (Input.GetAxisRaw("Horizontal") > 0)
+            {
+                facing = "Right";
+                anim.Play("Player_Right");
+            }
+            else if (Input.GetAxisRaw("Vertical") > 0)
+            {
+                facing = "Up";
+                anim.Play("Player_Up");
+            }
+            else if (Input.GetAxisRaw("Vertical") < 0)
+            {
+                facing = "Down";
+                anim.Play("Player_Down");
+            }
+            else
+            {
+                anim.Play("Player_Idle_" + facing);
+            }
         }
     }
 
     void FixedUpdate()
     {
-        //Store user input as a movement vector
-        Vector3 m_Input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
+        if (!opcont.GetComponent<OPController>().paused)
+        {
+            //Store user input as a movement vector
+            Vector3 m_Input = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"), 0);
 
-        //Apply the movement vector to the current position, which is
-        //multiplied by deltaTime and speed for a smooth MovePosition
-        rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
+            //Apply the movement vector to the current position, which is
+            //multiplied by deltaTime and speed for a smooth MovePosition
+            rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
+        }
     }
 
 

@@ -13,6 +13,8 @@ public class OPController : MonoBehaviour
     public GameObject roomGen;
 
     RoomGenerator roomGenScript;
+
+    public bool paused;
     // Start is called before the first frame update
     void Awake()
     {
@@ -22,7 +24,8 @@ public class OPController : MonoBehaviour
 
         roomGenScript = roomGen.GetComponent<RoomGenerator>();
 
-        
+        paused = false;
+
         //GameObject.Find("Canvas").SetActive(false);
     }
 
@@ -35,7 +38,10 @@ public class OPController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            paused = !paused;
+        }
         
     }
 

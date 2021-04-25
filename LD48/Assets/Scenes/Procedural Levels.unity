@@ -351,6 +351,7 @@ MonoBehaviour:
   globalLevel: 0
   startingRoom: {fileID: 2043001817}
   roomGen: {fileID: 1294713627}
+  paused: 0
 --- !u!4 &513819930
 Transform:
   m_ObjectHideFlags: 0
@@ -778,6 +779,29 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!111 &1005136432
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005136425}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 0}
+  m_Animations:
+  - {fileID: 7400000, guid: 25491a774a484c0459694f8530710941, type: 2}
+  - {fileID: 7400000, guid: c842dfffe4dc8be4092e739b9209f3bc, type: 2}
+  - {fileID: 7400000, guid: 812ce6381c68b1e4abe8f9633d318ac2, type: 2}
+  - {fileID: 7400000, guid: c8b6cf6fcbf38334a9662e60d43cd76e, type: 2}
+  - {fileID: 7400000, guid: c7ae4696275d7b64eae461310e89f4b6, type: 2}
+  - {fileID: 7400000, guid: 32aca61778c1a874daf0fd4d2a698efd, type: 2}
+  - {fileID: 7400000, guid: 2e96ed9ae4936284ea3098e4db9acbad, type: 2}
+  - {fileID: 7400000, guid: d7cb0daafaca2314eae968948585f90c, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1039400186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1256,6 +1280,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1683283012644349988, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: opcont
+      value: 
+      objectReference: {fileID: 513819928}
     - target: {fileID: 1683283012644349988, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
       propertyPath: pendDisp
       value: 
