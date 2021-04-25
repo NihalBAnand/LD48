@@ -17,7 +17,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         isOver = true;
         tooltip.SetActive(true);
-        tooltip.transform.position = new Vector3(eventData.position.x - (.5f * tooltip.GetComponent<RectTransform>().rect.width * canvas.GetComponent<Canvas>().scaleFactor), eventData.position.y - (.5f * tooltip.GetComponent<RectTransform>().rect.height * canvas.GetComponent<Canvas>().scaleFactor));
+        tooltip.transform.position = new Vector3(gameObject.transform.position.x + (gameObject.GetComponent<RectTransform>().rect.width * canvas.GetComponent<Canvas>().scaleFactor), gameObject.transform.position.y + (.75f * tooltip.GetComponent<RectTransform>().rect.height * canvas.GetComponent<Canvas>().scaleFactor));
     }
 
     public void OnPointerExit(PointerEventData eventData)
