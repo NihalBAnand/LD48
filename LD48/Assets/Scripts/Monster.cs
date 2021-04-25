@@ -6,11 +6,14 @@ public class Monster : MonoBehaviour
 {
     // Start is called before the first frame update
     public Sprite[] Images;
-    public int level;
+    
     public SpriteRenderer spriteRenderer;
+
+    public int level;
+    public float health;
     void Start()
     {
-        
+        health = 100f;
         
     }
     
@@ -35,5 +38,13 @@ public class Monster : MonoBehaviour
                 Debug.Log("Noticed Player!!");
             }
         }
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag.Equals("Player")){
+            collision.gameObject.GetComponent<PlayerController>().health -= 5;
+        }
+        Debug.Log("Monster Attack");
+        Debug.Log(collision.gameObject.GetComponent<PlayerController>().health);
     }
 }
