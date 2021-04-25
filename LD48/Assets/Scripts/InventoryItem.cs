@@ -9,6 +9,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
 
     public GameObject player;
     public GameObject tooltip;
+    public GameObject canvas;
 
     public bool isOver;
 
@@ -16,7 +17,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         isOver = true;
         tooltip.SetActive(true);
-        tooltip.transform.position
+        tooltip.transform.position = new Vector3(eventData.position.x - (.5f * tooltip.GetComponent<RectTransform>().rect.width * canvas.GetComponent<Canvas>().scaleFactor), eventData.position.y - (.5f * tooltip.GetComponent<RectTransform>().rect.height * canvas.GetComponent<Canvas>().scaleFactor));
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -30,6 +31,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         player = GameObject.Find("Player");
         tooltip = GameObject.Find("Tooltip");
+        canvas = GameObject.Find("Canvas");
     }
     // Start is called before the first frame update
     void Start()
