@@ -72,21 +72,7 @@ public class PlayerController : MonoBehaviour
         //multiplied by deltaTime and speed for a smooth MovePosition
         rigidbody.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
     }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("Monster"))
-        {
-            inRangeEnemy = collision.gameObject;
-        }
-    }
 
-    void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.tag.Equals("Monster"))
-        {
-            inRangeEnemy = null;
-        }
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -94,6 +80,12 @@ public class PlayerController : MonoBehaviour
         {
             canStart = true;
             cultText = collision.gameObject.GetComponent<Cultist>().text;
+        }
+        else if(collision.gameObject.tag.Equals("Monster"))
+        {
+            health -= 1;
+            Debug.Log("Monster Attack");
+            Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);
         }
     }
 

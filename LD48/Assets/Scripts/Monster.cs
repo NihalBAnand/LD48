@@ -10,12 +10,19 @@ public class Monster : MonoBehaviour
     
     public SpriteRenderer spriteRenderer;
 
+
     public int level;
     public float health;
+
+    public float speed;
+    
+    public Vector2 target;
+
+    public bool targetInRange;
     void Start()
     {
         health = 100f;
-        
+        speed = 2f;
     }
     
 
@@ -24,6 +31,7 @@ public class Monster : MonoBehaviour
     {
         if (level > 0)
             spriteRenderer.sprite = Images[level - 1];
+       
 
         
     }
@@ -39,17 +47,31 @@ public class Monster : MonoBehaviour
                 Debug.Log("Noticed Player!!");
             }
         }
+        if (targetInRange)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+ 
         if (collision.tag.Equals("Player")){
-            collision.gameObject.GetComponent<PlayerController>().health -= 1;
+            target = collision.transform.position;
+            targetInRange = true;
+            //collision.gameObject.GetComponent<PlayerController>().
             StartCoroutine(flashColor());
         }
-        Debug.Log("Monster Attack");
-        Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);
+        /*Debug.Log("Monster Attack");
+        Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);*/
     }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
 
+        if (collision.tag.Equals("Player"))
+        {
+            targetInRange = false;
+        }
+    }
     private IEnumerator flashColor()
     {
         GameObject.Find("HealthBar").GetComponent<Image>().color = new Color32(255, 105, 105, 255);

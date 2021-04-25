@@ -117,6 +117,7 @@ MonoBehaviour:
   cultText: []
   dispInventory: 0
   inventoryObj: {fileID: 0}
+  canStart: 0
 --- !u!61 &1683283012644349984
 BoxCollider2D:
   m_ObjectHideFlags: 0
