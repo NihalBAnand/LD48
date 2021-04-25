@@ -754,6 +754,30 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 786249623}
   m_CullTransparentMesh: 0
+--- !u!1 &1005136425 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1683283012644349991, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+  m_PrefabInstance: {fileID: 1507636878}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1005136431
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1005136425}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 16d391965802f144c887840322568eca, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1039400186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1172,6 +1196,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1683283012644349984, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_Size.y
+      value: 0.12560368
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683283012644349984, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.5972519
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683283012644349984, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.6666667
+      objectReference: {fileID: 0}
+    - target: {fileID: 1683283012644349984, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.2916666
+      objectReference: {fileID: 0}
     - target: {fileID: 1683283012644349986, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -1256,6 +1296,10 @@ PrefabInstance:
       propertyPath: pendantSprites.Array.data[2]
       value: 
       objectReference: {fileID: 197109145130246397, guid: 1549ab8fd53a37b4c8574026e0e8d6f7, type: 3}
+    - target: {fileID: 1683283012644349989, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 4334783836991956000, guid: 40d97738f5855a945aad2ec84671d156, type: 3}
     - target: {fileID: 1683283012644349989, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
       propertyPath: m_SortingOrder
       value: 1
