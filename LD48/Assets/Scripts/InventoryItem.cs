@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -17,14 +18,14 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     {
         isOver = true;
         tooltip.SetActive(true);
-        tooltip.transform.position = new Vector3(gameObject.transform.position.x + (gameObject.GetComponent<RectTransform>().rect.width * canvas.GetComponent<Canvas>().scaleFactor), gameObject.transform.position.y + (.75f * tooltip.GetComponent<RectTransform>().rect.height * canvas.GetComponent<Canvas>().scaleFactor));
+        tooltip.transform.position = new Vector3(gameObject.transform.position.x + (gameObject.GetComponent<RectTransform>().rect.width * canvas.GetComponent<Canvas>().scaleFactor * 1.3f), gameObject.transform.position.y + (.75f * tooltip.GetComponent<RectTransform>().rect.height * canvas.GetComponent<Canvas>().scaleFactor));
+        tooltip.transform.Find("Text").GetComponent<Text>().text = itemName;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         isOver = false;
         tooltip.SetActive(false);
-        Debug.Log("Mouse exit");
     }
 
     void Awake()
