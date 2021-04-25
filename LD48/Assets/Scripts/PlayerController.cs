@@ -16,8 +16,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //TODO: make player movement independent of resolution
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>( new string[] { "...AZATHOTH demands a sacrifice...", "...And it shall be YOU!", "Loser lmfao" } ));
+        }
     }
 
     private void FixedUpdate()
