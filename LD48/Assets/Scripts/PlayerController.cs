@@ -335,7 +335,7 @@ public class PlayerController : MonoBehaviour
         yield return new WaitForSeconds(len);
         foreach (GameObject monster in GameObject.Find("Room Generator").GetComponent<RoomGenerator>().monsters)
         {
-            monster.GetComponent<Monster>().targetDist = 3; //give monsters sight back after cloak effect
+            monster.GetComponent<Monster>().targetDist = 5; //give monsters sight back after cloak effect
         }
     }
 }
