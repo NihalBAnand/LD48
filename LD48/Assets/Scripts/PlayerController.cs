@@ -158,8 +158,11 @@ public class PlayerController : MonoBehaviour
             GameObject newSword = Instantiate(sword);
             
             newSword.transform.parent = gameObject.transform;
+            if (newSword.activeSelf)
+            {
+                newSword.GetComponent<Animator>().Play("sword");
+            }
             
-            newSword.GetComponent<Animator>().Play("sword");
             GameObject.Destroy(newSword, newSword.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
             
         }
