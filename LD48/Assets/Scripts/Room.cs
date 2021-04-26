@@ -29,12 +29,12 @@ public class Room : MonoBehaviour
                 if (collision.gameObject.transform.position.x > 0)
                 {
                     GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("East");
-                    collision.gameObject.transform.position = new Vector3(0, 0, 0);
+                    collision.gameObject.transform.position = new Vector3(-6, 0, 0);
                 }
                 if (collision.gameObject.transform.position.x < 0)
                 {
                     GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("West");
-                    collision.gameObject.transform.position = new Vector3(0, 0, 0);
+                    collision.gameObject.transform.position = new Vector3(6, 0, 0);
                 }
             }
             if (System.Math.Abs(collision.gameObject.transform.position.x) < System.Math.Abs(collision.gameObject.transform.position.y))
@@ -42,12 +42,12 @@ public class Room : MonoBehaviour
                 if (collision.gameObject.transform.position.y > 0)
                 {
                     GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("North");
-                    collision.gameObject.transform.position = new Vector3(0, 0, 0);
+                    collision.gameObject.transform.position = new Vector3(0, -3, 0);
                 }
                 if (collision.gameObject.transform.position.y < 0)
                 {
                     GameObject.FindGameObjectWithTag("roomgen").GetComponent<RoomGenerator>().UpdateMovement("South");
-                    collision.gameObject.transform.position = new Vector3(0, 0, 0);
+                    collision.gameObject.transform.position = new Vector3(0, 3, 0);
                 }
             }
         }
