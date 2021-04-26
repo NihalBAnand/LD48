@@ -3546,10 +3546,10 @@ MonoBehaviour:
   room11: {fileID: 982239682500945585, guid: 8becf1216618e2f4d97b465b347de694, type: 3}
   finalRoom: {fileID: 8974931189855527878, guid: 655d3a7400971da43b51ae7451a92000, type: 3}
   roomTypes: []
-  player: {fileID: 1683283012644349991, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
-  monster: {fileID: 42512475172285455, guid: fedcb4ed542ba8d4aa2df2d095c76e64, type: 3}
+  player: {fileID: 3549599390265029928, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+  monster: {fileID: 5645740907645935749, guid: fedcb4ed542ba8d4aa2df2d095c76e64, type: 3}
   monsters: []
-  artifact: {fileID: 0}
+  artifact: {fileID: 4261921031328847921, guid: ba5d2be084f0fae4dac8f3403b981108, type: 3}
   roomsGenerated: 0
   curRoomPos: {x: 0, y: 0}
   curRoom: {fileID: 0}
