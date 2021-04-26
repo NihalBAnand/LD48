@@ -55,8 +55,13 @@ public class Sword : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        //do the combat stoof here, GL
+        if (collision.collider.tag.Equals("Monster"))
+        {
+            collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+            Debug.Log("HIT");
+        }
     }
+ 
 }

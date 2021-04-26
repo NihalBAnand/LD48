@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4703137454713142847}
   - component: {fileID: 1007645668598445386}
   - component: {fileID: -1062466658389244416}
+  - component: {fileID: 8668964536347591889}
   m_Layer: 0
   m_Name: sword
   m_TagString: Untagged
@@ -95,7 +96,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.21182384, y: -0.22511297}
@@ -142,3 +143,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 500a35228df4edb4abee69e2544c36bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!50 &8668964536347591889
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4582661685943146187}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0

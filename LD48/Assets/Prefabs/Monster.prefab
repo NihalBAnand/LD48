@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 4510189554978594638}
   - component: {fileID: 5739329462447471877}
   - component: {fileID: 7477061314950102911}
-  - component: {fileID: 7475859105635318424}
   - component: {fileID: 1703699990439773713}
   m_Layer: 8
   m_Name: Monster
@@ -106,6 +105,7 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 04c09b59934050c4c9169c3758efeef7, type: 3}
   - {fileID: 21300000, guid: 1d53345001b55d343bc08ac7709b2d42, type: 3}
   spriteRenderer: {fileID: 6404178359295325070}
+  player: {fileID: 0}
   level: 0
   health: 0
   speed: 0
@@ -157,32 +157,6 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.5, y: 1.1}
-  m_EdgeRadius: 0
---- !u!61 &7475859105635318424
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 42512475172285455}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.56, y: 0.96}
-    newSize: {x: 0.82, y: 0.6}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 4, y: 4}
   m_EdgeRadius: 0
 --- !u!95 &1703699990439773713
 Animator:

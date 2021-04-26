@@ -32,6 +32,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(health <= 0) Destroy(gameObject);
         switch (level)
         {
             case 1:
@@ -50,6 +51,7 @@ public class Monster : MonoBehaviour
         {
             transform.localScale = new Vector2(1, 1);
         }
+        if (Vector2.Distance(gameObject.transform.position, player.transform.position) < 2) targetInRange = true;
         
     }
 
@@ -66,10 +68,10 @@ public class Monster : MonoBehaviour
         }
         if (targetInRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+   /* private void OnTriggerEnter2D(Collider2D collision)
     {
  
         if (collision.tag.Equals("Player")){
@@ -78,8 +80,8 @@ public class Monster : MonoBehaviour
             //collision.gameObject.GetComponent<PlayerController>().
             
         }
-        /*Debug.Log("Monster Attack");
-        Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);*/
+        *//*Debug.Log("Monster Attack");
+        Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);*//*
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
@@ -88,6 +90,6 @@ public class Monster : MonoBehaviour
         {
             targetInRange = false;
         }
-    }
+    }*/
     
 }
