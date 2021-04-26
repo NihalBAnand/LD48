@@ -1,7 +1,238 @@
 fileFormatVersion: 2
 guid: 5b2f15796559eed4692da657e8b2d45e
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -3043159266611370317
+    second: cult sword-_0
+  - first:
+      213: 3362792073427866493
+    second: cult sword-_1
+  - first:
+      213: 7638509110759209216
+    second: cult sword-_2
+  - first:
+      213: -5980701417884574214
+    second: cult sword-_3
+  - first:
+      213: -6373487791442555504
+    second: cult sword-_4
+  - first:
+      213: 1192285712721751961
+    second: cult sword-_5
+  - first:
+      213: 6404687614205508247
+    second: cult sword-_6
+  - first:
+      213: -6874426736148947348
+    second: cult sword-_7
+  - first:
+      213: -974482925834418797
+    second: cult sword-_8
+  - first:
+      213: -6254202702729753313
+    second: cult sword-_9
+  - first:
+      213: 3363084559882544046
+    second: cult sword-_10
+  - first:
+      213: -4234800154164733289
+    second: cult sword-_11
+  - first:
+      213: -1008235044364373481
+    second: cult sword-_12
+  - first:
+      213: 7762766443510082429
+    second: cult sword-_13
+  - first:
+      213: -7634038563636303001
+    second: cult sword-_14
+  - first:
+      213: -3103448100233468142
+    second: cult sword-_15
+  - first:
+      213: 48490405568427570
+    second: cult sword-_16
+  - first:
+      213: 571974863846672572
+    second: cult sword-_17
+  - first:
+      213: 3159783165886231121
+    second: cult sword-_18
+  - first:
+      213: -7670229693182524328
+    second: cult sword-_19
+  - first:
+      213: 5120478547536946622
+    second: cult sword-_20
+  - first:
+      213: 1216159124472841475
+    second: cult sword-_21
+  - first:
+      213: 2017842668328564479
+    second: cult sword-_22
+  - first:
+      213: 4436546682847016169
+    second: cult sword-_23
+  - first:
+      213: -5261169841199443215
+    second: cult sword-_24
+  - first:
+      213: -642198526527595796
+    second: cult sword-_25
+  - first:
+      213: -1233251810176903114
+    second: cult sword-_26
+  - first:
+      213: -2544662154659295994
+    second: cult sword-_27
+  - first:
+      213: -923304542940067720
+    second: cult sword-_0
+  - first:
+      213: -2656720372755189739
+    second: cult sword-_1
+  - first:
+      213: -3247453585409375514
+    second: cult sword-_2
+  - first:
+      213: -1375408621488308228
+    second: cult sword-_3
+  - first:
+      213: 4726750565683256240
+    second: cult sword-_4
+  - first:
+      213: -3058557159830147202
+    second: cult sword-_5
+  - first:
+      213: -7207265524146065241
+    second: cult sword-_6
+  - first:
+      213: 4697913686532820568
+    second: cult sword-_7
+  - first:
+      213: 601353942806556427
+    second: cult sword-_8
+  - first:
+      213: -6105888598268633511
+    second: cult sword-_9
+  - first:
+      213: 8941726393232134658
+    second: cult sword-_10
+  - first:
+      213: -5432711251704585860
+    second: cult sword-_11
+  - first:
+      213: 3274936939601621664
+    second: cult sword-_12
+  - first:
+      213: -3982161228282758781
+    second: cult sword-_13
+  - first:
+      213: -4381099164377159614
+    second: cult sword-_14
+  - first:
+      213: 2776202245481681717
+    second: cult sword-_15
+  - first:
+      213: 2138276141949703866
+    second: cult sword-_16
+  - first:
+      213: 4444460776127548718
+    second: cult sword-_17
+  - first:
+      213: -1314432054078842300
+    second: cult sword-_18
+  - first:
+      213: 7172704702302871679
+    second: cult sword-_19
+  - first:
+      213: 2317153352533527532
+    second: cult sword-_20
+  - first:
+      213: 269407669261967507
+    second: cult sword-_21
+  - first:
+      213: 8307672503301658519
+    second: cult sword-_22
+  - first:
+      213: 2706287509052115824
+    second: cult sword-_23
+  - first:
+      213: -9049467314793776342
+    second: cult sword-_24
+  - first:
+      213: 3311232662480140268
+    second: cult sword-_25
+  - first:
+      213: 62537771309217025
+    second: cult sword-_26
+  - first:
+      213: -1912919457832848573
+    second: cult sword-_27
+  - first:
+      213: -1679908472285587095
+    second: cult sword-_28
+  - first:
+      213: -2094880554629432300
+    second: cult sword-_29
+  - first:
+      213: 2701257890704942712
+    second: cult sword-_30
+  - first:
+      213: -6484204203589946246
+    second: cult sword-_31
+  - first:
+      213: 7161165186904668085
+    second: cult sword-_32
+  - first:
+      213: 6672871971393172291
+    second: cult sword-_33
+  - first:
+      213: -1935227725461335130
+    second: cult sword-_34
+  - first:
+      213: 910170872532290508
+    second: cult sword-_35
+  - first:
+      213: -1205183777376270127
+    second: cult sword-_36
+  - first:
+      213: -5478701752797079831
+    second: cult sword-_37
+  - first:
+      213: 5026043716569666652
+    second: cult sword-_38
+  - first:
+      213: -2941185073553091899
+    second: cult sword-_39
+  - first:
+      213: 4000976238299412393
+    second: cult sword-_40
+  - first:
+      213: 1605975052192851833
+    second: cult sword-_41
+  - first:
+      213: -3970082975748101964
+    second: cult sword-_42
+  - first:
+      213: 4000799729085713499
+    second: cult sword-_43
+  - first:
+      213: -5438528693979537741
+    second: cult sword-_44
+  - first:
+      213: -6109259805008534544
+    second: cult sword-_45
+  - first:
+      213: 6286366454596890617
+    second: cult sword-_46
+  - first:
+      213: 6812330011519656839
+    second: cult sword-_47
+  - first:
+      213: 2463175574632926305
+    second: cult sword-_48
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +272,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -66,7 +297,31 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -75,7 +330,574 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: cult sword-_0
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 2050
+        width: 81
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8788d8af863cf23f0800000000000000
+      internalID: -923304542940067720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_1
+      rect:
+        serializedVersion: 2
+        x: 484
+        y: 2045
+        width: 76
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510326a95ee612bd0800000000000000
+      internalID: -2656720372755189739
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_2
+      rect:
+        serializedVersion: 2
+        x: 551
+        y: 2093
+        width: 27
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e20b197b2abee2d0800000000000000
+      internalID: -3247453585409375514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_3
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 2050
+        width: 92
+        height: 166
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfffd2f552199ece0800000000000000
+      internalID: -1375408621488308228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_4
+      rect:
+        serializedVersion: 2
+        x: 1253
+        y: 2057
+        width: 86
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bb5d69989ac89140800000000000000
+      internalID: 4726750565683256240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_5
+      rect:
+        serializedVersion: 2
+        x: 1643
+        y: 2050
+        width: 87
+        height: 153
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7fa813d772dd85d0800000000000000
+      internalID: -3058557159830147202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_6
+      rect:
+        serializedVersion: 2
+        x: 2021
+        y: 2045
+        width: 97
+        height: 158
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0ba570136aafb90800000000000000
+      internalID: -7207265524146065241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_8
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 1667
+        width: 69
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0fe3419930785800800000000000000
+      internalID: 601353942806556427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_9
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 1667
+        width: 62
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95e17169ba6834ba0800000000000000
+      internalID: -6105888598268633511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_10
+      rect:
+        serializedVersion: 2
+        x: 875
+        y: 1667
+        width: 63
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 202165387c4671c70800000000000000
+      internalID: 8941726393232134658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_11
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 1661
+        width: 74
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7161ea76e12b94b0800000000000000
+      internalID: -5432711251704585860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_12
+      rect:
+        serializedVersion: 2
+        x: 1649
+        y: 1661
+        width: 74
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a272c29bc9e27d20800000000000000
+      internalID: 3274936939601621664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_13
+      rect:
+        serializedVersion: 2
+        x: 2027
+        y: 1672
+        width: 110
+        height: 141
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3897fd516758cb8c0800000000000000
+      internalID: -3982161228282758781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_14
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 1217
+        width: 141
+        height: 207
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 248e985a5853333c0800000000000000
+      internalID: -4381099164377159614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_15
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 1186
+        width: 170
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 533d39abb3d078620800000000000000
+      internalID: 2776202245481681717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_16
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 1186
+        width: 158
+        height: 159
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab6da9072deacad10800000000000000
+      internalID: 2138276141949703866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_17
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 1193
+        width: 130
+        height: 152
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2d4d333785edad30800000000000000
+      internalID: 4444460776127548718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_18
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 1199
+        width: 74
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a5e3fc20332cde0800000000000000
+      internalID: -1314432054078842300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_19
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 1199
+        width: 74
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7069839ce09a8360800000000000000
+      internalID: 7172704702302871679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_20
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 815
+        width: 76
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cebcdd382be282020800000000000000
+      internalID: 2317153352533527532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_21
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 815
+        width: 74
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 390202a09d02db300800000000000000
+      internalID: 269407669261967507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_22
+      rect:
+        serializedVersion: 2
+        x: 857
+        y: 815
+        width: 74
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79753953028ca4370800000000000000
+      internalID: 8307672503301658519
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_23
+      rect:
+        serializedVersion: 2
+        x: 1240
+        y: 815
+        width: 76
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07bc025a62aae8520800000000000000
+      internalID: 2706287509052115824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_24
+      rect:
+        serializedVersion: 2
+        x: 1625
+        y: 815
+        width: 74
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2b753f5c65d96280800000000000000
+      internalID: -9049467314793776342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_25
+      rect:
+        serializedVersion: 2
+        x: 2009
+        y: 815
+        width: 74
+        height: 146
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce7bcc7109cd3fd20800000000000000
+      internalID: 3311232662480140268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_26
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 430
+        width: 76
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1053eeb85cd2ed000800000000000000
+      internalID: 62537771309217025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cult sword-_27
+      rect:
+        serializedVersion: 2
+        x: 473
+        y: 430
+        width: 74
+        height: 148
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 343b0ff53e1f375e0800000000000000
+      internalID: -1912919457832848573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
