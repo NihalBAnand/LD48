@@ -59,6 +59,7 @@ public class OPController : MonoBehaviour
 
         roomGenScript.curRoomPos = roomGenScript.rooms[0].GetComponent<Room>().pos;
         roomGenScript.curRoom = roomGenScript.rooms[0].GetComponent<Room>();
+        roomGenScript.rooms[0].transform.localScale = new Vector3(1.2f, 1.2f, 1);
         roomGen.SetActive(true);
         
         

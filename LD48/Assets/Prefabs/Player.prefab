@@ -53,7 +53,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -108,16 +108,17 @@ MonoBehaviour:
   - {fileID: -7812037798849800910, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
   - {fileID: -3091125404629116300, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
   - {fileID: -1757740016571080316, guid: 4a1e551b042df6c42a07b91a91c8c0a9, type: 3}
-  ringSprites:
-  - {fileID: 8871654181525829375, guid: 98f308aabcc3067438da908a063beedb, type: 3}
-  - {fileID: -8706687748432112674, guid: 98f308aabcc3067438da908a063beedb, type: 3}
-  - {fileID: 8175805699146971416, guid: 98f308aabcc3067438da908a063beedb, type: 3}
-  - {fileID: -1008456683148239857, guid: 98f308aabcc3067438da908a063beedb, type: 3}
   canStart: 0
   cultText: []
   dispInventory: 0
   inventoryObj: {fileID: 0}
-  canStart: 0
+  ringDisp: []
+  rings: []
+  pendDisp: {fileID: 0}
+  pendant: 
+  facing: 
+  anim: {fileID: 0}
+  opcont: {fileID: 0}
 --- !u!61 &1683283012644349984
 BoxCollider2D:
   m_ObjectHideFlags: 0
