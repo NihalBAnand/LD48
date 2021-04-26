@@ -947,7 +947,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -4095,6 +4095,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 3549599389718200824, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_Intensity
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549599389718200824, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_PointLightOuterRadius
+      value: 2.9337306
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549599389718200825, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9999983
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549599389718200825, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3549599389718200825, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.0018572339
+      objectReference: {fileID: 0}
     - target: {fileID: 3549599390265029933, guid: 881130317ea431a499b64b38c9d9a07d, type: 3}
       propertyPath: knife
       value: 
@@ -6249,6 +6269,22 @@ PrefabInstance:
     - target: {fileID: 6138956167369524718, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}
       propertyPath: m_Name
       value: item
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138956167369524719, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}
+      propertyPath: m_Size.y
+      value: 1.594095
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138956167369524719, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.00000023841858
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138956167369524719, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.68999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 6138956167369524719, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 1.46
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}

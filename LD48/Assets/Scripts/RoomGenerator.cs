@@ -231,7 +231,7 @@ public class RoomGenerator : MonoBehaviour
             }
             //finish generation
             temp.GetComponent<Room>().pos = curRoomPos;
-            temp.transform.localScale = new Vector3(1.2f, 1.2f, 1);
+            temp.transform.localScale = new Vector3(.406f, .355f, 1);
             curRoom = temp.GetComponent<Room>();
             rooms.Add(temp);
         }

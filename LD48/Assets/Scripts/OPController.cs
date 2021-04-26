@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class OPController : MonoBehaviour
 {
@@ -86,7 +87,7 @@ public class OPController : MonoBehaviour
 
         roomGenScript.curRoomPos = roomGenScript.rooms[0].GetComponent<Room>().pos;
         roomGenScript.curRoom = roomGenScript.rooms[0].GetComponent<Room>();
-        roomGenScript.rooms[0].transform.localScale = new Vector3(1.2f, 1.2f, 1);
+        roomGenScript.rooms[0].transform.localScale = new Vector3(.406f, .355f, 1);
 
         
         roomGen.SetActive(true);
@@ -104,6 +105,10 @@ public class OPController : MonoBehaviour
         GameObject.Destroy(GameObject.FindGameObjectWithTag("Room"));
         startingRoom.SetActive(true);
         globalLevel++;
+        if (globalLevel > 5)
+        {
+            SceneManager.LoadScene("You Win");
+        }
     }
 
     public void Resume()
