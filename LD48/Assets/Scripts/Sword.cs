@@ -8,7 +8,7 @@ public class Sword : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         switch (transform.parent.GetComponent<PlayerController>().facing)
         {
             case "Down":
@@ -29,6 +29,7 @@ public class Sword : MonoBehaviour
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 break;
         }
+        StartCoroutine(createHitbox());
     }
 
     // Update is called once per frame
@@ -62,6 +63,12 @@ public class Sword : MonoBehaviour
             collision.collider.gameObject.GetComponent<Monster>().health -= 50;
             Debug.Log("HIT");
         }
+    }
+
+    IEnumerator createHitbox()
+    {
+        yield return new WaitForSeconds(.5f);
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
     }
  
 }

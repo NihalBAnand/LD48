@@ -36,6 +36,12 @@ public class PlayerController : MonoBehaviour
 
     public GameObject sword;
     public bool attacking;
+    public string weapon;
+    public GameObject weaponDisp;
+    public Sprite knife;
+    public Sprite swSprite;
+    public GameObject knifePre;
+
 
     void Start()
     {
@@ -67,7 +73,11 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return) && canStart)
             {
                 GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(cultText);
-
+                if (opcont.GetComponent<OPController>().globalLevel == 1)
+                {
+                    weapon = "knife";
+                    weaponDisp.GetComponent<Image>().sprite = knife;
+                }
             }
 
             if (Input.GetMouseButtonDown(0))
@@ -153,18 +163,37 @@ public class PlayerController : MonoBehaviour
 
     void attack()
     {
-        if (GameObject.Find("sword(Clone)") == null)
+        if (weapon == "sword")
         {
-            GameObject newSword = Instantiate(sword);
-            
-            newSword.transform.parent = gameObject.transform;
-            if (newSword.activeSelf)
+            if (GameObject.Find("sword(Clone)") == null)
             {
-                newSword.GetComponent<Animator>().Play("sword");
+                GameObject newSword = Instantiate(sword);
+
+                newSword.transform.parent = gameObject.transform;
+                if (newSword.activeSelf)
+                {
+                    newSword.GetComponent<Animator>().Play("sword");
+                }
+
+                GameObject.Destroy(newSword, newSword.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+
             }
-            
-            GameObject.Destroy(newSword, newSword.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
-            
+        }
+        else
+        {
+            if (GameObject.Find("knife(Clone)") == null)
+            {
+                GameObject newKnife = Instantiate(knifePre);
+
+                newKnife.transform.parent = gameObject.transform;
+                if (newKnife.activeSelf)
+                {
+                    newKnife.GetComponent<Animator>().Play("knife");
+                }
+
+                GameObject.Destroy(newKnife, newKnife.GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).length);
+
+            }
         }
     }
 }
