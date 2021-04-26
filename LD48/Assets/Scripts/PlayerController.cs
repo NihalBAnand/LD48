@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public int health;
 
     Rigidbody2D rigidbody;
-
+    
     public GameObject inRangeEnemy;
 
     public List<Sprite> healthSprites;
@@ -34,10 +34,6 @@ public class PlayerController : MonoBehaviour
 
     public GameObject opcont;
 
-    public Vector2 unitCirclePoint;
-    public GameObject sword;
-    public GameObject collider;
-
     void Start()
     {
         health = 7;
@@ -51,14 +47,11 @@ public class PlayerController : MonoBehaviour
 
         facing = "Down";
         anim = gameObject.GetComponent<Animator>();
-
-        unitCirclePoint = new Vector2(transform.position.x, transform.position.y + 2);
     }
 
     // Update is called once per frame
     void Update()
     {
-
         if (!opcont.GetComponent<OPController>().paused)
         {
             if (Input.GetKeyDown(KeyCode.E))
@@ -104,12 +97,6 @@ public class PlayerController : MonoBehaviour
                 anim.Play("Player_Idle_" + facing);
             }
         }
-        if (Input.GetButtonDown("Fire1"))
-        {
-            attack();
-        }
-
-
     }
 
     void FixedUpdate()
@@ -133,7 +120,7 @@ public class PlayerController : MonoBehaviour
             canStart = true;
             cultText = collision.gameObject.GetComponent<Cultist>().text;
         }
-        else if (collision.gameObject.tag.Equals("Monster"))
+        else if(collision.gameObject.tag.Equals("Monster"))
         {
             health -= 1;
             StartCoroutine(flashColor());
@@ -154,10 +141,5 @@ public class PlayerController : MonoBehaviour
         GameObject.Find("HealthBar").GetComponent<Image>().color = new Color32(255, 105, 105, 255);
         yield return new WaitForSecondsRealtime(.2f);
         GameObject.Find("HealthBar").GetComponent<Image>().color = new Color32(255, 255, 255, 255);
-    }
-    public void attack()
-    {
-
-
     }
 }
