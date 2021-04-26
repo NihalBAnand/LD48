@@ -4253,7 +4253,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 29b5ed862162b1443926fa1aa2eead3f, type: 3}
-    m_FontSize: 42
+    m_FontSize: 40
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -4270,18 +4270,18 @@ MonoBehaviour:
     WASD/ARROW KEYS: Movement
 
 
-    LEFT CLICK: Attack
+    LEFT CLICK: Attack/View
+    Item Description in Inventory
 
 
-    I:
-    Open Inventory
+    I: Open Inventory
 
 
-    RIGHT CLICK: Trash Item in Inventory
+    RIGHT CLICK: Trash
+    Item in Inventory
 
 
-    ENTER/RETURN:
-    Interact
+    ENTER/RETURN: Interact
 
 
     SPACE: Advance dialogue
@@ -4291,7 +4291,8 @@ MonoBehaviour:
 
 
 
-    ENTER/RETURN: Interact'
+    ENTER/RETURN:
+    Interact'
 --- !u!222 &1566583438
 CanvasRenderer:
   m_ObjectHideFlags: 0
