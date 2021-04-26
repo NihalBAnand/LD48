@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -89,6 +90,10 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (health <= 0)
+        {
+            SceneManager.LoadScene("Game Over");
+        }
         if (!opcont.GetComponent<OPController>().paused) //pause updates if game is paused
         {
             if (Input.GetKeyDown(KeyCode.I)) //toggle inventory
