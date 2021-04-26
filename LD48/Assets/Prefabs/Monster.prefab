@@ -113,6 +113,7 @@ MonoBehaviour:
   frozen: 0
   freezeDuration: 0
   targetInRange: 0
+  targetDist: 0
   itemNames:
   - "Greater B\u2019gnu-Thun\u2019s Eye (pendant)"
   - "Greater Yomagn\u2019tho\u2019s Core (pendant)"
@@ -123,6 +124,12 @@ MonoBehaviour:
   - "Greater Cthulhu\u2019s Crown (circlet)"
   - "Greater Yegg-Ha\u2019s Cloak (cloak)"
   - "Greater Aphoom-Zhah\u2019s Blood (potion)"
+  - Lesser Han's Claw (ring)
+  - Greater Ei'lor's Vine (ring)
+  - Greater Hnarqu's Tendril (ring)
+  - "Lesser B\u2019gnu-Thun\u2019s Eye (pendant)"
+  - "Lesser Yomagn\u2019tho\u2019s Core (pendant)"
+  - "Lesser Istasha\u2019s Heart (pendant)"
   itemSprites:
   - {fileID: -9045553713736260533, guid: 1549ab8fd53a37b4c8574026e0e8d6f7, type: 3}
   - {fileID: 1609548049414875706, guid: 1549ab8fd53a37b4c8574026e0e8d6f7, type: 3}
@@ -133,6 +140,12 @@ MonoBehaviour:
   - {fileID: 8813677622436840228, guid: 3754ed1c58d7a654ebd91985b8578664, type: 3}
   - {fileID: 4282829175189351136, guid: 95a00d2462a256745927d8014a41f71a, type: 3}
   - {fileID: 731806605160617493, guid: e4b800111af09e2419a26482db27e4e8, type: 3}
+  - {fileID: -7409561325138900784, guid: 14e04bbf2dceea04d84cadbb5d9b2443, type: 3}
+  - {fileID: 6360484618660499361, guid: 14e04bbf2dceea04d84cadbb5d9b2443, type: 3}
+  - {fileID: 4948464252139501786, guid: 14e04bbf2dceea04d84cadbb5d9b2443, type: 3}
+  - {fileID: -5083948439510903509, guid: 24120d3cdebe2dd46b4ecb52df6eaa8b, type: 3}
+  - {fileID: 7752767538066580810, guid: 24120d3cdebe2dd46b4ecb52df6eaa8b, type: 3}
+  - {fileID: -5598760424993612565, guid: 24120d3cdebe2dd46b4ecb52df6eaa8b, type: 3}
   item: {fileID: 6138956167369524718, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}
 --- !u!50 &5739329462447471877
 Rigidbody2D:

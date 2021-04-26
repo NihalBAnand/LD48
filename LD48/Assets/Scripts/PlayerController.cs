@@ -19,6 +19,8 @@ public class PlayerController : MonoBehaviour
     public bool canTalk;
     public List<string> cultText;
 
+    public bool canFinish;
+
     public bool dispInventory;
     public GameObject inventoryObj;
     public GameObject tooltip;
@@ -59,6 +61,11 @@ public class PlayerController : MonoBehaviour
     public bool onCircletCooldown = false;
     public bool onPotionCooldown = false;
     public bool onCloakCooldown = false;
+
+    public int monstersKilled = 0;
+    public bool gotArtifact = false;
+    public bool cutHand = false;
+    public bool killedPerson = false;
     
     void Start()
     {
@@ -168,6 +175,32 @@ public class PlayerController : MonoBehaviour
             {
                 anim.Play("Player_Idle_" + facing);
             }
+        }
+
+        switch (opcont.GetComponent<OPController>().globalLevel)
+        {
+            case 1:
+                canFinish = true;
+                break;
+            case 2:
+                if (monstersKilled >= 25)
+                {
+                    canFinish = true;
+                }
+                else
+                {
+                    canFinish = false;
+                }
+                break;
+            case 3:
+                canFinish = gotArtifact;
+                break;
+            case 4:
+                canFinish = cutHand;
+                break;
+            case 5:
+                canFinish = killedPerson;
+                break;
         }
     }
 

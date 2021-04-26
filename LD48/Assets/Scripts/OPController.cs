@@ -87,6 +87,8 @@ public class OPController : MonoBehaviour
         roomGenScript.curRoomPos = roomGenScript.rooms[0].GetComponent<Room>().pos;
         roomGenScript.curRoom = roomGenScript.rooms[0].GetComponent<Room>();
         roomGenScript.rooms[0].transform.localScale = new Vector3(1.2f, 1.2f, 1);
+
+        
         roomGen.SetActive(true);
         
         
@@ -98,6 +100,7 @@ public class OPController : MonoBehaviour
         roomGen.GetComponent<RoomGenerator>().roomsGenerated = 0;
         roomGen.GetComponent<RoomGenerator>().rooms.Clear();
         roomGen.GetComponent<RoomGenerator>().monsters.Clear();
+        GameObject.Find("Player").GetComponent<PlayerController>().monstersKilled = 0;
         GameObject.Destroy(GameObject.FindGameObjectWithTag("Room"));
         startingRoom.SetActive(true);
         globalLevel++;

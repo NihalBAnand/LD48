@@ -83,6 +83,7 @@ public class Monster : MonoBehaviour
                 temp.GetComponent<ItemObj>().itemName = itemNames[itemNum];
 
             }
+            player.GetComponent<PlayerController>().monstersKilled++;
             //destroy ourselves
             Destroy(gameObject);
         }

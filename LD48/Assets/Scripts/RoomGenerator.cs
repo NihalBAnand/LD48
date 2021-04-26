@@ -25,6 +25,8 @@ public class RoomGenerator : MonoBehaviour
     public GameObject monster;
     public List<GameObject> monsters = new List<GameObject>();
 
+    public GameObject artifact;
+
     private int globalLevel;
     public int roomsGenerated;
 
@@ -215,8 +217,15 @@ public class RoomGenerator : MonoBehaviour
                             monsters.Add(temp2);
                         }
                     }
-                
 
+                    if (GameObject.Find("OP Controller").GetComponent<OPController>().globalLevel == 3)
+                    {
+                        int artifactNum = rand.Next(0, 51);
+                        if (artifactNum == 2)
+                        {
+                            Instantiate(artifact);
+                        }
+                    }
                     roomsGenerated++;
                 }
             }
