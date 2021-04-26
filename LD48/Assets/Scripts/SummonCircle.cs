@@ -17,11 +17,11 @@ public class SummonCircle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Contains("Player"))
+        if (collision.gameObject.name.Contains("Player") && collision.gameObject.GetComponent<PlayerController>().canStart)
         {
             collision.gameObject.transform.position = new Vector3(0, 0, 0);
             GameObject.Find("OP Controller").GetComponent<OPController>().enterLevel();
-            
+            collision.gameObject.GetComponent<PlayerController>().canStart = false;
         }
     }
 }

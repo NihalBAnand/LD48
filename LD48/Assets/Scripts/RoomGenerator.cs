@@ -206,7 +206,9 @@ public class RoomGenerator : MonoBehaviour
                     if (monNum == 0)
                     {
                         GameObject temp2 = Instantiate(monster);
+                        
                         temp2.GetComponent<Monster>().level = rand.Next(globalLevel, temp.GetComponent<Room>().roomLevel);
+                        temp2.GetComponent<Monster>().health = temp2.GetComponent<Monster>().level * 50;
                         temp2.transform.parent = temp.transform;
                         monsters.Add(temp2);
                     }

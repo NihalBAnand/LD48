@@ -10,7 +10,7 @@ public class UIController : MonoBehaviour
 
     public bool tStarted;
     int pages;
-    int curPage;
+    public int curPage;
     List<string> text;
     // Start is called before the first frame update
     void Start()
@@ -30,7 +30,7 @@ public class UIController : MonoBehaviour
         if (tStarted)
         {
             textbox.SetActive(true);
-            textfield.GetComponent<Text>().text = text[curPage];
+            
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 curPage++;
@@ -39,6 +39,7 @@ public class UIController : MonoBehaviour
             {
                 tStarted = false;
             }
+            textfield.GetComponent<Text>().text = text[curPage];
         }
     }
 

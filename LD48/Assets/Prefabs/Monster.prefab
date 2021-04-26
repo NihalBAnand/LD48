@@ -29,7 +29,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 42512475172285455}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.93, y: 0.54, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -111,6 +111,21 @@ MonoBehaviour:
   speed: 0
   target: {x: 0, y: 0}
   targetInRange: 0
+  itemNames:
+  - "B\u2019gnu-Thun\u2019s Eye (pendant)"
+  - "Yomagn\u2019tho\u2019s Core (pendant)"
+  - "Istasha\u2019s Heart (pendant)"
+  - "Han\u2019s Claw (ring)"
+  - "Ei\u2019lor\u2019s Vine (ring)"
+  - "Hnarqu\u2019s Tendril (ring)"
+  itemSprites:
+  - {fileID: -9045553713736260533, guid: 1549ab8fd53a37b4c8574026e0e8d6f7, type: 3}
+  - {fileID: 1609548049414875706, guid: 1549ab8fd53a37b4c8574026e0e8d6f7, type: 3}
+  - {fileID: -7527225759110374857, guid: 1549ab8fd53a37b4c8574026e0e8d6f7, type: 3}
+  - {fileID: -8706687748432112674, guid: 98f308aabcc3067438da908a063beedb, type: 3}
+  - {fileID: 8175805699146971416, guid: 98f308aabcc3067438da908a063beedb, type: 3}
+  - {fileID: -1008456683148239857, guid: 98f308aabcc3067438da908a063beedb, type: 3}
+  item: {fileID: 6138956167369524718, guid: 7b37202f72b8bd8438b183c8aa092962, type: 3}
 --- !u!50 &5739329462447471877
 Rigidbody2D:
   serializedVersion: 4

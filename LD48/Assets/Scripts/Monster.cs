@@ -20,19 +20,33 @@ public class Monster : MonoBehaviour
     public Vector2 target;
 
     public bool targetInRange;
+
+    public string[] itemNames;
+    public List<Sprite> itemSprites;
+    public GameObject item;
     void Start()
     {
-        health = 100f;
         speed = 2f;
 
         player = GameObject.Find("Player");
+        List<GameObject> rooms = GameObject.Find("Room Generator").GetComponent<RoomGenerator>().rooms;
+        gameObject.transform.position = new Vector3(Random.Range(rooms[0].GetComponent<SpriteRenderer>().bounds.min.x + 1, rooms[0].GetComponent<SpriteRenderer>().bounds.max.x - 1), Random.Range(rooms[0].GetComponent<SpriteRenderer>().bounds.min.y + 1, rooms[0].GetComponent<SpriteRenderer>().bounds.max.y - 1));
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        if(health <= 0) Destroy(gameObject);
+        if (health <= 0)
+        {
+            System.Random rand = new System.Random();
+            int itemNum = rand.Next(0, itemNames.Length);
+            GameObject temp = Instantiate(item);
+            temp.GetComponent<SpriteRenderer>().sprite = itemSprites[itemNum];
+            temp.GetComponent<ItemObj>().itemName = itemNames[itemNum];
+
+            Destroy(gameObject);
+        }
         switch (level)
         {
             case 1:
@@ -68,28 +82,46 @@ public class Monster : MonoBehaviour
         }
         if (targetInRange)
         {
-            transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
+            gameObject.transform.position = Vector2.MoveTowards(transform.position, player.transform.position, speed * Time.deltaTime);
         }
     }
-   /* private void OnTriggerEnter2D(Collider2D collision)
-    {
- 
-        if (collision.tag.Equals("Player")){
-            target = collision.transform.position;
-            targetInRange = true;
-            //collision.gameObject.GetComponent<PlayerController>().
-            
-        }
-        *//*Debug.Log("Monster Attack");
-        Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);*//*
-    }
-    private void OnTriggerExit2D(Collider2D collision)
-    {
+    /* private void OnTriggerEnter2D(Collider2D collision)
+     {
 
-        if (collision.tag.Equals("Player"))
+         if (collision.tag.Equals("Player")){
+             target = collision.transform.position;
+             targetInRange = true;
+             //collision.gameObject.GetComponent<PlayerController>().
+
+         }
+         *//*Debug.Log("Monster Attack");
+         Debug.Log(GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>().health);*//*
+     }
+     private void OnTriggerExit2D(Collider2D collision)
+     {
+
+         if (collision.tag.Equals("Player"))
+         {
+             targetInRange = false;
+         }
+     }*/
+
+    private IEnumerator flashColor()
+    {
+        gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+        Debug.Log("hello");
+        yield return new WaitForSeconds(.2f);
+        gameObject.GetComponent<SpriteRenderer>().color = Color.white;
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        Debug.Log(collision.collider.gameObject.name);
+        if (collision.collider.gameObject.name.Contains("knife") || collision.collider.gameObject.name.Contains("sword"))
         {
-            targetInRange = false;
+            StartCoroutine(flashColor());
+            Debug.Log("Hit" + collision.collider.gameObject.name);
         }
-    }*/
-    
+    }
+
 }

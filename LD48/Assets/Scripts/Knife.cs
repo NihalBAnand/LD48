@@ -13,25 +13,25 @@ public class Knife : MonoBehaviour
         {
             case "Down":
                 direction = new Vector3(0, -3f) + transform.parent.transform.position;
-                transform.position = new Vector3(0, -1) + transform.parent.transform.position;
+                transform.position = new Vector3(0, -1f) + transform.parent.transform.position;
                 transform.eulerAngles = new Vector3(0, 0, 90);
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 5;
                 break;
             case "Up":
                 direction = new Vector3(0, 3f) + transform.parent.transform.position;
-                transform.position = new Vector3(0, 1) + transform.parent.transform.position;
+                transform.position = new Vector3(0, .5f) + transform.parent.transform.position;
                 transform.eulerAngles = new Vector3(0, 0, 270);
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 break;
             case "Left":
                 direction = new Vector3(-3f, 0f) + transform.parent.transform.position;
-                transform.position = new Vector3(-1, 0) + transform.parent.transform.position;
+                transform.position = new Vector3(-.5f, 0) + transform.parent.transform.position;
                 transform.eulerAngles = new Vector3(0, 0, 0);
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 break;
             case "Right":
                 direction = new Vector3(3f, 0) + transform.parent.transform.position;
-                transform.position = new Vector3(1, 0) + transform.parent.transform.position;
+                transform.position = new Vector3(.5f, 0) + transform.parent.transform.position;
                 transform.localScale = new Vector3(-1, 1);
                 gameObject.GetComponent<SpriteRenderer>().sortingOrder = 3;
                 break;
@@ -68,8 +68,11 @@ public class Knife : MonoBehaviour
         if (collision.collider.tag.Equals("Monster"))
         {
             collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+            //StartCoroutine(collision.collider.gameObject.GetComponent<Monster>().flashColor());
             Debug.Log("HIT");
+            GameObject.Destroy(gameObject);
         }
+        
     }
 
     IEnumerator createHitbox()

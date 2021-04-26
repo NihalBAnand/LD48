@@ -68,7 +68,18 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
                 itemName = "No pendant equipped";
             }
         }
-        
+        else if (gameObject.name.Contains("weapon"))
+        {
+            if (player.GetComponent<PlayerController>().weapon != "")
+            {
+                itemName = player.GetComponent<PlayerController>().weapon;
+            }
+            else
+            {
+                itemName = "No weapon equipped";
+            }
+        }
+
         if (isOver)
         {
             tooltip.transform.Find("Text").GetComponent<Text>().text = itemName;

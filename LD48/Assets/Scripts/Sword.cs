@@ -61,6 +61,7 @@ public class Sword : MonoBehaviour
         if (collision.collider.tag.Equals("Monster"))
         {
             collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+            //StartCoroutine(collision.collider.gameObject.GetComponent<Monster>().flashColor());
             Debug.Log("HIT");
         }
     }

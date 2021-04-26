@@ -16,10 +16,12 @@ public class PlayerController : MonoBehaviour
     public List<Sprite> healthSprites;
 
     public bool canStart;
+    public bool canTalk;
     public List<string> cultText;
 
     public bool dispInventory;
     public GameObject inventoryObj;
+    public GameObject tooltip;
 
     //public List<Sprite> ringSprites;
     public List<GameObject> ringDisp;
@@ -69,13 +71,17 @@ public class PlayerController : MonoBehaviour
             }
 
             inventoryObj.SetActive(dispInventory);
+            if (!dispInventory)
+            {
+                tooltip.SetActive(false);
+            }
 
-            if (Input.GetKeyDown(KeyCode.Return) && canStart)
+            if (Input.GetKeyDown(KeyCode.Return) && canTalk)
             {
                 GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(cultText);
                 if (opcont.GetComponent<OPController>().globalLevel == 1)
                 {
-                    weapon = "knife";
+                    weapon = "Fang of Atlach-Nacha";
                     weaponDisp.GetComponent<Image>().sprite = knife;
                 }
             }
@@ -135,7 +141,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Cult"))
         {
-            canStart = true;
+            canTalk = true;
             cultText = collision.gameObject.GetComponent<Cultist>().text;
         }
         else if(collision.gameObject.tag.Equals("Monster"))
@@ -151,7 +157,7 @@ public class PlayerController : MonoBehaviour
     {
         if (collision.gameObject.name.Contains("Cult"))
         {
-            canStart = false;
+            canTalk = false;
         }
     }
     private IEnumerator flashColor()
@@ -179,7 +185,7 @@ public class PlayerController : MonoBehaviour
 
             }
         }
-        else
+        else if (weapon.Contains("Fang"))
         {
             if (GameObject.Find("knife(Clone)") == null)
             {

@@ -15,12 +15,13 @@ public class OPController : MonoBehaviour
     RoomGenerator roomGenScript;
 
     public bool paused;
+    public bool started;
     // Start is called before the first frame update
     void Awake()
     {
         inLevel = false;
         justInLevel = false;
-        globalLevel = 1;
+        globalLevel = 0;
 
         roomGenScript = roomGen.GetComponent<RoomGenerator>();
 
@@ -32,7 +33,8 @@ public class OPController : MonoBehaviour
     private void Start()
     {
         roomGen.SetActive(false);
-
+        startingRoom.SetActive(false);
+        GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "I’m an agent of the Bureau, have been for five years now. My mission this time is to infiltrate a potentially dangerous \"religious terrorist organization.\"", "What that really means is that I gotta bust a cult.", "That’s the thing about this job, you never know what’s next.", "Anyway, I gotta earn their trust and get to the bottom of what they’re doing.", "HINT: press ‘escape’ to bring up a pause menu.", "Press ‘enter’ to continue." }));
     }
 
     // Update is called once per frame
@@ -42,7 +44,13 @@ public class OPController : MonoBehaviour
         {
             paused = !paused;
         }
-        
+        if (!started && Input.GetKeyDown(KeyCode.Return))
+        {
+            started = true;
+            GameObject.Find("UIController").GetComponent<UIController>().curPage = 1000;
+            GameObject.Find("Image").SetActive(false);
+            exitLevel();
+        }
     }
 
     public void enterLevel()
