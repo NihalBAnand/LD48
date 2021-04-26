@@ -40,6 +40,7 @@ public class UIController : MonoBehaviour
             {
                 tStarted = false;
             }
+            else
             textfield.GetComponent<Text>().text = text[curPage];
         }
     }

@@ -15,6 +15,8 @@ public class Monster : MonoBehaviour
     public int level;
     public float health;
 
+    public int type;
+
     public float speed;
     
     public Vector2 target;
@@ -30,6 +32,9 @@ public class Monster : MonoBehaviour
     public GameObject item;
     void Start()
     {
+        System.Random temp = new System.Random();
+        type = temp.Next(0,2);
+
         speed = 2f;
         targetDist = 3;
 
@@ -88,14 +93,15 @@ public class Monster : MonoBehaviour
             Destroy(gameObject);
         }
         //determine look based on level
-        switch (level)
+        switch (type)
         {
             case 1:
                 gameObject.GetComponent<Animator>().Play("Hoggoth");
                 break;
             default:
-                gameObject.GetComponent<Animator>().Play("Hoggoth");
+                gameObject.GetComponent<Animator>().Play("Lanzhorath");
                 break;
+            
         }
 
         //flip to face the player if we have detected them
