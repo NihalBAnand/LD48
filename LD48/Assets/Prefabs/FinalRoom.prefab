@@ -356,7 +356,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -13.308323, y: -9.527904}
+  m_Offset: {x: -11.483885, y: -12.712373}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -367,7 +367,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 20.486115, y: 2.352335}
+  m_Size: {x: 20.287083, y: 2.617712}
   m_EdgeRadius: 0
 --- !u!61 &6328804555359160418
 BoxCollider2D:
@@ -382,7 +382,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -1.7960129, y: 15.987443}
+  m_Offset: {x: 0.35189056, y: 12.861017}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -393,7 +393,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 43.1502, y: 2.6267834}
+  m_Size: {x: 38.854393, y: 2.7988853}
   m_EdgeRadius: 0
 --- !u!61 &2629631871263826012
 BoxCollider2D:
@@ -408,7 +408,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 18.778566, y: 3.1607466}
+  m_Offset: {x: 20.708754, y: 1.35149}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -419,7 +419,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.3895226, y: 22.98326}
+  m_Size: {x: 1.9605904, y: 25.79866}
   m_EdgeRadius: 0
 --- !u!61 &5016476456775252552
 BoxCollider2D:
@@ -434,7 +434,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -22.266285, y: 3.2136145}
+  m_Offset: {x: -20.320776, y: 1.4993801}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -445,5 +445,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.4790115, y: 23.03216}
+  m_Size: {x: 2.4439583, y: 25.550575}
   m_EdgeRadius: 0
