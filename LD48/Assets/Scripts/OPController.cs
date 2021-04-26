@@ -14,6 +14,10 @@ public class OPController : MonoBehaviour
 
     RoomGenerator roomGenScript;
 
+    public GameObject confirmQuit;
+    public GameObject pauseMenu;
+    public GameObject controls;
+
     public bool paused;
     public bool started;
     // Start is called before the first frame update
@@ -34,21 +38,36 @@ public class OPController : MonoBehaviour
     {
         roomGen.SetActive(false);
         startingRoom.SetActive(false);
+        pauseMenu.SetActive(false);
+        confirmQuit.SetActive(false);
+        controls.SetActive(false);
+        Time.timeScale = 0;
         GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "I’m an agent of the Bureau, have been for five years now. My mission this time is to infiltrate a potentially dangerous \"religious terrorist organization.\"", "What that really means is that I gotta bust a cult.", "That’s the thing about this job, you never know what’s next.", "Anyway, I gotta earn their trust and get to the bottom of what they’re doing.", "HINT: press ‘escape’ to bring up a pause menu.", "Press ‘enter’ to continue." }));
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape)) //pause
         {
             paused = !paused;
         }
-        if (!started && Input.GetKeyDown(KeyCode.Return))
+        if (paused)
+        {
+            Time.timeScale = 0;
+            pauseMenu.SetActive(true);
+        }
+        else
+        {
+            Time.timeScale = 1;
+            pauseMenu.SetActive(false);
+        }
+        if (!started && Input.GetKeyDown(KeyCode.Return)) //end intro and start game
         {
             started = true;
-            GameObject.Find("UIController").GetComponent<UIController>().curPage = 1000;
-            GameObject.Find("Image").SetActive(false);
+            Time.timeScale = 1;
+            GameObject.Find("UIController").GetComponent<UIController>().curPage = 1000; //alows to skip intro
+            GameObject.Find("Image").SetActive(false); //removes black background
             exitLevel();
         }
     }
@@ -82,5 +101,37 @@ public class OPController : MonoBehaviour
         GameObject.Destroy(GameObject.FindGameObjectWithTag("Room"));
         startingRoom.SetActive(true);
         globalLevel++;
+    }
+
+    public void Resume()
+    {
+        paused = false;
+    }
+
+    public void Controls()
+    {
+        if (controls.activeInHierarchy)
+        {
+            controls.SetActive(false);
+        }
+        else
+        {
+            controls.SetActive(true);
+        }
+    }
+
+    public void Quit()
+    {
+        confirmQuit.SetActive(true);
+    }
+
+    public void NoQuit()
+    {
+        confirmQuit.SetActive(false);
+    }
+
+    public void ConfirmQuit()
+    {
+        Application.Quit();
     }
 }

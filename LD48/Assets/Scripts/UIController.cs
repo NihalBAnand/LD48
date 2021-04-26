@@ -7,6 +7,7 @@ public class UIController : MonoBehaviour
 {
     GameObject textbox;
     GameObject textfield;
+    public GameObject descWin;
 
     public bool tStarted;
     int pages;
@@ -52,5 +53,8 @@ public class UIController : MonoBehaviour
         tStarted = true;
     }
 
-    
+    public void CloseDescriptions()
+    {
+        descWin.SetActive(false);
+    }
 }

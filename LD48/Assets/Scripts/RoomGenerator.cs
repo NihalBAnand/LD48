@@ -200,18 +200,22 @@ public class RoomGenerator : MonoBehaviour
                     temp = Instantiate(roomTypes[roomNum]);
                     validRoomFound = true;
 
-                    temp.GetComponent<Room>().roomLevel = rand.Next(1, 6) + globalLevel;
-
-                    int monNum = rand.Next(0, 2);
-                    if (monNum == 0)
+                    temp.GetComponent<Room>().roomLevel = rand.Next(1, 6) + globalLevel; //randomize room level
+                    int numMon = rand.Next(0, (int)temp.GetComponent<Room>().roomLevel / 2); //randomize number of monsters
+                    for (int i = 0; i < numMon; i++)
                     {
-                        GameObject temp2 = Instantiate(monster);
-                        
-                        temp2.GetComponent<Monster>().level = rand.Next(globalLevel, temp.GetComponent<Room>().roomLevel);
-                        temp2.GetComponent<Monster>().health = temp2.GetComponent<Monster>().level * 50;
-                        temp2.transform.parent = temp.transform;
-                        monsters.Add(temp2);
+                        int monNum = rand.Next(0, 2);//still a 50% chance to spawn a monster at all on this pass of the loop
+                        if (monNum == 0)
+                        {
+                            GameObject temp2 = Instantiate(monster);
+
+                            temp2.GetComponent<Monster>().level = rand.Next(globalLevel, temp.GetComponent<Room>().roomLevel);
+                            temp2.GetComponent<Monster>().health = temp2.GetComponent<Monster>().level * 50;
+                            temp2.transform.parent = temp.transform;
+                            monsters.Add(temp2);
+                        }
                     }
+                
 
                     roomsGenerated++;
                 }

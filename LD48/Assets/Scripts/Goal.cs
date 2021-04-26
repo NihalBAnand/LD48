@@ -18,7 +18,7 @@ public class Goal : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Contains("Player"))
+        if (collision.gameObject.name.Contains("Player")) //sends player back to starting room TODO: add canFinish, like SummoningCircle
         {
             collision.gameObject.transform.position = new Vector3(0, 0, 0);
             GameObject.Find("OP Controller").GetComponent<OPController>().exitLevel();

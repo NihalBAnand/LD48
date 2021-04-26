@@ -17,7 +17,7 @@ public class SummonCircle : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.name.Contains("Player") && collision.gameObject.GetComponent<PlayerController>().canStart)
+        if (collision.gameObject.name.Contains("Player") && collision.gameObject.GetComponent<PlayerController>().canStart) //start level if player is allowed to
         {
             collision.gameObject.transform.position = new Vector3(0, 0, 0);
             GameObject.Find("OP Controller").GetComponent<OPController>().enterLevel();

@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// This whole class is basically the same as the knife, so just refer to that
+/// </summary>
+
 public class Sword : MonoBehaviour
 {
     Vector2 direction;
@@ -60,9 +65,58 @@ public class Sword : MonoBehaviour
     {
         if (collision.collider.tag.Equals("Monster"))
         {
-            collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+            collision.collider.gameObject.GetComponent<Monster>().health -= 75;
             //StartCoroutine(collision.collider.gameObject.GetComponent<Monster>().flashColor());
             Debug.Log("HIT");
+
+            foreach (string s in transform.parent.GetComponent<PlayerController>().rings)
+            {
+                switch (s)
+                {
+                    case "Lesser Hnarqu’s Tendril (ring)":
+                        collision.collider.gameObject.GetComponent<Monster>().health -= 25;
+                        break;
+                    case "Greater Hnarqu’s Tendril (ring)":
+                        collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+                        break;
+                    case "Lesser Han’s Claw (ring)":
+                        collision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(direction / 2);
+                        break;
+                    case "Greater Han’s Claw (ring)":
+                        collision.collider.gameObject.GetComponent<Rigidbody2D>().AddForce(direction);
+                        break;
+                    case "Lesser Ei’lor’s Vine (ring)":
+                        collision.collider.gameObject.GetComponent<Monster>().freezeDuration = 2.5f;
+                        collision.collider.gameObject.GetComponent<Monster>().frozen = true;
+                        break;
+                    case "Greater Ei’lor’s Vine (ring)":
+                        collision.collider.gameObject.GetComponent<Monster>().freezeDuration = 5f;
+                        collision.collider.gameObject.GetComponent<Monster>().frozen = true;
+                        break;
+                }
+            }
+
+            switch (transform.parent.GetComponent<PlayerController>().pendant)
+            {
+                case "Lesser B’gnu-Thun’s Eye (pendant)":
+                    collision.collider.gameObject.GetComponent<Monster>().health -= 25;
+                    break;
+                case "Greater B’gnu-Thun’s Eye (pendant)":
+                    collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+                    break;
+                case "Lesser Yomagn’tho’s Core (pendant)":
+                    collision.collider.gameObject.GetComponent<Monster>().health -= 25;
+                    break;
+                case "Greater Yomagn’tho’s Core (pendant)":
+                    collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+                    break;
+                case "Lesser Istasha’s Heart (pendant)":
+                    collision.collider.gameObject.GetComponent<Monster>().health -= 25;
+                    break;
+                case "Greater Istasha’s Heart (pendant)":
+                    collision.collider.gameObject.GetComponent<Monster>().health -= 50;
+                    break;
+            }
         }
     }
 

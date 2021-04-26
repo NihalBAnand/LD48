@@ -1,55 +1,19 @@
 fileFormatVersion: 2
-guid: 1549ab8fd53a37b4c8574026e0e8d6f7
+guid: 9c555efa1a05f6d4c8f2c00b70d36235
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -9045553713736260533
-    second: pendants_0
+      213: 446604050088615132
+    second: Pause_Menu_0
   - first:
-      213: -6472758309318418065
-    second: pendants_1
+      213: 3654935601845084255
+    second: Pause_Menu_1
   - first:
-      213: -4707065870988509817
-    second: pendants_2
+      213: -3175557867616747823
+    second: Pause_Menu_2
   - first:
-      213: 197109145130246397
-    second: pendants_3
-  - first:
-      213: 5031620974456875515
-    second: pendants_4
-  - first:
-      213: 1609548049414875706
-    second: pendants_5
-  - first:
-      213: -7527225759110374857
-    second: pendants_6
-  - first:
-      213: -2817615066408917703
-    second: pendants_7
-  - first:
-      213: 6971100414414905087
-    second: pendants_0
-  - first:
-      213: 6956049397320651945
-    second: pendants_1
-  - first:
-      213: 2893070535029689654
-    second: pendants_2
-  - first:
-      213: 6263552965724798420
-    second: pendants_3
-  - first:
-      213: -4013088760936710610
-    second: pendants_4
-  - first:
-      213: 8628122684337740097
-    second: pendants_5
-  - first:
-      213: -4390187759023819864
-    second: pendants_6
-  - first:
-      213: 2147270937840544084
-    second: pendants_7
+      213: 2948566443303436160
+    second: Pause_Menu_3
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -149,169 +113,85 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: pendants_0
+      name: Pause_Menu_0
       rect:
         serializedVersion: 2
-        x: 42
-        y: 414
-        width: 102
-        height: 138
+        x: 40
+        y: 1184
+        width: 880
+        height: 512
       alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 435, y: 133, z: 445, w: 122}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ffe57c674e25eb060800000000000000
-      internalID: 6971100414414905087
+      spriteID: cdc58c07408a23600800000000000000
+      internalID: 446604050088615132
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pendants_1
+      name: Pause_Menu_1
       rect:
         serializedVersion: 2
-        x: 234
-        y: 444
-        width: 102
-        height: 78
+        x: 1280
+        y: 1384
+        width: 312
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9a41e57721ad88060800000000000000
-      internalID: 6956049397320651945
+      spriteID: f50a7e0b090f8b230800000000000000
+      internalID: 3654935601845084255
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pendants_2
+      name: Pause_Menu_2
       rect:
         serializedVersion: 2
-        x: 426
-        y: 444
-        width: 102
-        height: 78
+        x: 320
+        y: 424
+        width: 312
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63d089ec250462820800000000000000
-      internalID: 2893070535029689654
+      spriteID: 1deb109b1f62ee3d0800000000000000
+      internalID: -3175557867616747823
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: pendants_3
+      name: Pause_Menu_3
       rect:
         serializedVersion: 2
-        x: 66
-        y: 234
-        width: 66
-        height: 126
+        x: 1280
+        y: 424
+        width: 312
+        height: 120
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ddfed19c3c9ce650800000000000000
-      internalID: 6263552965724798420
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pendants_4
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 234
-        width: 66
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e2e3140c805ae48c0800000000000000
-      internalID: -4013088760936710610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pendants_5
-      rect:
-        serializedVersion: 2
-        x: 438
-        y: 222
-        width: 90
-        height: 132
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 149d07e1edf3db770800000000000000
-      internalID: 8628122684337740097
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pendants_6
-      rect:
-        serializedVersion: 2
-        x: 66
-        y: 42
-        width: 54
-        height: 114
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8a3fd1e4e7be213c0800000000000000
-      internalID: -4390187759023819864
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: pendants_7
-      rect:
-        serializedVersion: 2
-        x: 258
-        y: 42
-        width: 66
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 459618e8a83accd10800000000000000
-      internalID: 2147270937840544084
+      spriteID: 08ffcb9de896be820800000000000000
+      internalID: 2948566443303436160
       vertices: []
       indices: 
       edges: []

@@ -15,11 +15,11 @@ public class Cultist : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch(GameObject.Find("OP Controller").GetComponent<OPController>().globalLevel)
+        switch(GameObject.Find("OP Controller").GetComponent<OPController>().globalLevel) //set dialogue lines for every level
         {
             case 1:
                 text = new List<string>(new string[] { "...The children of AZATHOTH welcome you, initiate…", "...Your trial is to undergo a series of ordeals, designed to test your will and devotion...",
-                    "...Find the SIGIL OF RETURN, identical to the SUMMONING CIRCLE before you...", "...Take this dagger, the FANG OF ATLACH-NACHA, to protect yourself on the way...",
+                    "...Find the SIGIL OF RETURN, identical to the SUMMONING CIRCLE before you...", "...Take your pick of ATLACH-NACHA'S FANG or MYNOGHRA'S LOVE, to protect yourself on the way...",
                     "...Your first task begins as you enter the SUMMONING CIRCLE...", "...The mercy of the GREAT ONES be with you."});
                 break;
         }

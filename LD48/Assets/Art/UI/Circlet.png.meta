@@ -1,19 +1,13 @@
 fileFormatVersion: 2
-guid: 98f308aabcc3067438da908a063beedb
+guid: 95a00d2462a256745927d8014a41f71a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8706687748432112674
-    second: rings_0
+      213: 4282829175189351136
+    second: Circlet_0
   - first:
-      213: 8175805699146971416
-    second: rings_1
-  - first:
-      213: -1008456683148239857
-    second: rings_2
-  - first:
-      213: 8871654181525829375
-    second: rings_3
+      213: 3763850347788918543
+    second: Circlet_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -113,85 +107,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rings_0
+      name: Circlet_0
       rect:
         serializedVersion: 2
-        x: 60
-        y: 246
-        width: 72
-        height: 90
+        x: 32
+        y: 624
+        width: 384
+        height: 272
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ed355707f91ab2780800000000000000
-      internalID: -8706687748432112674
+      spriteID: 0ea27d4817aaf6b30800000000000000
+      internalID: 4282829175189351136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: rings_1
+      name: Circlet_1
       rect:
         serializedVersion: 2
-        x: 252
-        y: 246
-        width: 72
-        height: 84
+        x: 32
+        y: 112
+        width: 384
+        height: 272
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 819f44257fb467170800000000000000
-      internalID: 8175805699146971416
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rings_2
-      rect:
-        serializedVersion: 2
-        x: 60
-        y: 60
-        width: 72
-        height: 78
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f0c949d5dfd3102f0800000000000000
-      internalID: -1008456683148239857
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: rings_3
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 60
-        width: 72
-        height: 78
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff6b4fb59727e1b70800000000000000
-      internalID: 8871654181525829375
+      spriteID: f0f50b713f1eb3430800000000000000
+      internalID: 3763850347788918543
       vertices: []
       indices: 
       edges: []
