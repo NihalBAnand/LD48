@@ -10,6 +10,7 @@ public class Monster : MonoBehaviour
     
     public SpriteRenderer spriteRenderer;
 
+    public GameObject player;
 
     public int level;
     public float health;
@@ -23,16 +24,32 @@ public class Monster : MonoBehaviour
     {
         health = 100f;
         speed = 2f;
+
+        player = GameObject.Find("Player");
     }
     
 
     // Update is called once per frame
     void Update()
     {
-        if (level > 0)
-            spriteRenderer.sprite = Images[level - 1];
+        switch (level)
+        {
+            case 1:
+                gameObject.GetComponent<Animator>().Play("Hoggoth");
+                break;
+            default:
+                gameObject.GetComponent<Animator>().Play("Hoggoth");
+                break;
+        }
        
-
+        if (gameObject.transform.position.x > player.transform.position.x)
+        {
+            transform.localScale = new Vector2(-1, 1);
+        }
+        else
+        {
+            transform.localScale = new Vector2(1, 1);
+        }
         
     }
 
