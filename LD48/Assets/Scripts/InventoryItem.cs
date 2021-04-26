@@ -11,7 +11,6 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
     public GameObject player;
     public GameObject tooltip;
     public GameObject canvas;
-    public Sprite silhouette;
 
     public bool isOver;
 
@@ -20,7 +19,7 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
         isOver = true;
         tooltip.SetActive(true);
         tooltip.transform.position = new Vector3(gameObject.transform.position.x + (gameObject.GetComponent<RectTransform>().rect.width * canvas.GetComponent<Canvas>().scaleFactor * 1.3f), gameObject.transform.position.y + (.75f * tooltip.GetComponent<RectTransform>().rect.height * canvas.GetComponent<Canvas>().scaleFactor));
-        
+        tooltip.transform.Find("Text").GetComponent<Text>().text = itemName;
     }
 
     public void OnPointerExit(PointerEventData eventData)
@@ -69,30 +68,5 @@ public class InventoryItem : MonoBehaviour, IPointerEnterHandler, IPointerExitHa
             }
         }
         
-        if (isOver)
-        {
-            tooltip.transform.Find("Text").GetComponent<Text>().text = itemName;
-            if (Input.GetMouseButtonDown(1))
-            {
-                if (gameObject.name.Contains("ring"))
-                {
-                    if (player.GetComponent<PlayerController>().rings[System.Int32.Parse(gameObject.name.Substring(gameObject.name.Length - 1))] != null)
-                    {
-                        itemName = "No ring equipped";
-                        player.GetComponent<PlayerController>().rings[System.Int32.Parse(gameObject.name.Substring(gameObject.name.Length - 1))] = null;
-                        gameObject.GetComponent<Image>().sprite = silhouette;
-                    }
-                }
-                else if (gameObject.name.Contains("pendant"))
-                {
-                    if (player.GetComponent<PlayerController>().pendant != "")
-                    {
-                        itemName = "No pendant equipped";
-                        player.GetComponent<PlayerController>().pendant = "";
-                        gameObject.GetComponent<Image>().sprite = silhouette;
-                    }
-                }
-            }
-        }
     }
 }
