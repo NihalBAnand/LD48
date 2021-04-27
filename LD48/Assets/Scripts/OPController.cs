@@ -43,7 +43,7 @@ public class OPController : MonoBehaviour
         confirmQuit.SetActive(false);
         controls.SetActive(false);
         Time.timeScale = 0;
-        GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "I’m an agent of the Bureau, have been for five years now. My mission this time is to infiltrate a potentially dangerous \"religious terrorist organization.\"", "What that really means is that I gotta bust a cult.", "That’s the thing about this job, you never know what’s next.", "Anyway, I gotta earn their trust and get to the bottom of what they’re doing.", "HINT: press ‘escape’ to bring up a pause menu.", "Press ‘enter’ to continue." }));
+        GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(new List<string>(new string[] { "I’m an agent of the Bureau, have been for five years now. My mission this time is to infiltrate a potentially dangerous \"religious terrorist organization.\"", "What that really means is that I gotta bust a cult.", "That’s the thing about this job, you never know what’s next.", "Anyway, I gotta earn their trust and get to the bottom of what they’re doing.", "I should probably talk to their leader when I get there.", "HINT: press ‘escape’ to bring up a pause menu and view controls.", "Press ‘enter’ to continue." }));
     }
 
     // Update is called once per frame
