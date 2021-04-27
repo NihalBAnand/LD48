@@ -36,7 +36,7 @@ public class Monster : MonoBehaviour
         type = temp.Next(0,2);
 
         speed = 2f;
-        targetDist = 3;
+        targetDist = 5;
 
         player = GameObject.Find("Player");
         List<GameObject> rooms = GameObject.Find("Room Generator").GetComponent<RoomGenerator>().rooms; //randomize position within room
@@ -47,6 +47,7 @@ public class Monster : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.localScale = new Vector3(4, 3, 0);
         if (health <= 0) //death stuff
         {
             System.Random rand = new System.Random();
@@ -92,6 +93,7 @@ public class Monster : MonoBehaviour
             //destroy ourselves
             Destroy(gameObject);
         }
+
         //determine look based on level
         switch (type)
         {
@@ -109,11 +111,11 @@ public class Monster : MonoBehaviour
         {
             if (gameObject.transform.position.x > player.transform.position.x)
             {
-                transform.localScale = new Vector2(-1, 1);
+                transform.localScale = new Vector2(-4, 4);
             }
             else
             {
-                transform.localScale = new Vector2(1, 1);
+                transform.localScale = new Vector2(4, 4);
             }
         }
 

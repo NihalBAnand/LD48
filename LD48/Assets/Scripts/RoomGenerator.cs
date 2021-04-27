@@ -206,7 +206,7 @@ public class RoomGenerator : MonoBehaviour
                     int numMon = rand.Next(0, (int)temp.GetComponent<Room>().roomLevel / 2); //randomize number of monsters
                     for (int i = 0; i < numMon; i++)
                     {
-                        int monNum = rand.Next(0, 2);//still a 50% chance to spawn a monster at all on this pass of the loop
+                        int monNum = rand.Next(0, 1);//still a 50% chance to spawn a monster at all on this pass of the loop
                         if (monNum == 0)
                         {
                             GameObject temp2 = Instantiate(monster);
