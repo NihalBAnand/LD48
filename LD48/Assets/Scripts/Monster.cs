@@ -85,6 +85,7 @@ public class Monster : MonoBehaviour
                 //instantiate the item
                 GameObject temp = Instantiate(item);
                 temp.transform.position = gameObject.transform.position;
+                temp.transform.localScale = new Vector3(1, 1, 1);
                 temp.GetComponent<SpriteRenderer>().sprite = itemSprites[itemNum];
                 temp.GetComponent<ItemObj>().itemName = itemNames[itemNum];
 
