@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
 
     public string facing;
     public Animator anim;
+    public string hand = "";
 
     public GameObject opcont;
 
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
     public int monstersKilled = 0;
     public bool gotArtifact = false;
     public bool cutHand = false;
+    public bool canCut = false;
     public bool killedPerson = false;
     
     void Start()
@@ -114,6 +116,11 @@ public class PlayerController : MonoBehaviour
                 {
                     canStart = true;
                 }
+                if (canCut)
+                {
+                    hand = "_Nohand";
+                    cutHand = true;
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.E) && circlet != "" && !onCircletCooldown) //activate circlet ability
@@ -159,26 +166,26 @@ public class PlayerController : MonoBehaviour
             if (Input.GetAxisRaw("Horizontal") < 0)
             {
                 facing = "Left";
-                anim.Play("Player_Left");
+                anim.Play("Player_Left" + hand);
             }
             else if (Input.GetAxisRaw("Horizontal") > 0)
             {
                 facing = "Right";
-                anim.Play("Player_Right");
+                anim.Play("Player_Right" + hand);
             }
             else if (Input.GetAxisRaw("Vertical") > 0)
             {
                 facing = "Up";
-                anim.Play("Player_Up");
+                anim.Play("Player_Up" + hand);
             }
             else if (Input.GetAxisRaw("Vertical") < 0)
             {
                 facing = "Down";
-                anim.Play("Player_Down");
+                anim.Play("Player_Down" + hand);
             }
             else
             {
-                anim.Play("Player_Idle_" + facing);
+                anim.Play("Player_Idle_" + facing + hand);
             }
         }
 
@@ -229,6 +236,14 @@ public class PlayerController : MonoBehaviour
         {
             canTalk = true;
             cultText = collision.gameObject.GetComponent<Cultist>().text;
+            if (collision.gameObject.name.Contains("Self"))
+            {
+                canCut = true;
+            }
+            else
+            {
+                canCut = false;
+            }
         }
         else if(collision.gameObject.tag.Equals("Monster")) //detect collision with monster
         {

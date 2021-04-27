@@ -23,5 +23,15 @@ public class Cultist : MonoBehaviour
                     "...Your first task begins as you enter the SUMMONING CIRCLE...", "...The mercy of the GREAT ONES be with you."});
                 break;
         }
+
+        if (gameObject.name.Contains("Sacrifice"))
+        {
+            text = new List<string>(new string[] { "AZATHOTH DEMANDS A SACRIFICE", "KILL THIS WOMAN AND OPEN THE GATES OF MADNESS UPON ALL MANKIND" });
+        }
+
+        if (gameObject.name.Contains("Self"))
+        {
+            text = new List<string>(new string[] { "...AZATHOTH requires a show of DEVOTION...", "...Slice off your hand and present it to the GREAT ONE!" });
+        }
     }
 }

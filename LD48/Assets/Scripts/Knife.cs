@@ -122,6 +122,12 @@ public class Knife : MonoBehaviour
 
             GameObject.Destroy(gameObject);
         }
+        if (collision.collider.gameObject.name.Contains("Sacrifice"))
+        {
+            transform.parent.GetComponent<PlayerController>().killedPerson = true;
+            Destroy(collision.collider.gameObject);
+            Destroy(gameObject);
+        }
         
     }
 

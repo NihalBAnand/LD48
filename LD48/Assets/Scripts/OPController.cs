@@ -102,6 +102,7 @@ public class OPController : MonoBehaviour
         roomGen.GetComponent<RoomGenerator>().rooms.Clear();
         roomGen.GetComponent<RoomGenerator>().monsters.Clear();
         GameObject.Find("Player").GetComponent<PlayerController>().monstersKilled = 0;
+        GameObject.Find("Player").GetComponent<PlayerController>().health =7;
         GameObject.Destroy(GameObject.FindGameObjectWithTag("Room"));
         startingRoom.SetActive(true);
         globalLevel++;

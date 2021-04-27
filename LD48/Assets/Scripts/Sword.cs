@@ -118,6 +118,11 @@ public class Sword : MonoBehaviour
                     break;
             }
         }
+        if (collision.collider.gameObject.name.Contains("Sacrifice"))
+        {
+            transform.parent.GetComponent<PlayerController>().killedPerson = true;
+            Destroy(collision.collider.gameObject);
+        }
     }
 
     IEnumerator createHitbox()
