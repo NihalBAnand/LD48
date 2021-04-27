@@ -112,10 +112,7 @@ public class PlayerController : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Return) && canTalk) //talk to (technically) any cultist
             {
                 GameObject.Find("UIController").GetComponent<UIController>().CreateTextbox(cultText);
-                if (opcont.GetComponent<OPController>().globalLevel == 1) //unlock summoning circle if we talk to cultist
-                {
-                    canStart = true;
-                }
+                canStart = true;
                 if (canCut)
                 {
                     hand = "_Nohand";
